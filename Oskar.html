@@ -1,0 +1,185 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Oskar Droescher, Kai Arne Möbert, Mario Schenkewitz, Jos Trautermann, Florian Schoon">
+    <link rel="stylesheet" href="OskarStyle.css">
+    <title>Web-Programmierung Gruppe 1</title>
+</head>
+
+<body>
+    <div>
+        <h1 class="LinearGradient" style="text-align:center; font-size: 120px">Catwatch</h1>
+        <div style="text-align:center;">
+            <h1 class="PopArt" style="font-size: 90px"><u>Slideshow</u></h1>
+        </div>
+
+          <div class="box center">
+            <img class="mySlides" src="./OskarBilder/Katze-1.png">
+            <img class="mySlides" src="./OskarBilder/Katze-2.png">
+            <img class="mySlides" src="./OskarBilder/Katze-3.png">
+            <img class="mySlides" src="./OskarBilder/Katze-4.png">
+            <img class="mySlides" src="./OskarBilder/Katze-5.png">
+            <img class="mySlides" src="./OskarBilder/Katze-6.png">
+            <img class="mySlides" src="./OskarBilder/Katze-7.png">
+          </div>
+          <div style="text-align: center;">
+            <button class="button display-left" style="width: 60; border-radius: 20%; font-size: 24px; background-color: rgb(0, 179, 250); color: white;" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="button display-right" style="width: 60; border-radius: 20%; font-size: 24px; background-color: rgb(0, 179, 250); color: white;" onclick="plusDivs(1)">&#10095;</button>
+            <p class="LinearGradient" style="font-size: 30px; color: black;"><b>Klick dich durch unsere Vielzahl von Katzenbildern und lass dir deinen Tag versüßen!</b></p>
+          </div>
+    </div>
+          
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+    showDivs(slideIndex += n);
+    }
+    
+    function currentDiv(n) {
+    showDivs(slideIndex = n);
+    }
+    
+    function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace("white", "");
+    }
+    x[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += "white";
+    }
+    </script>
+
+    <hr>
+    <div>
+        <table style="width: auto; max-width: 700px; font-size: 25px; background-color: grey; color: black;">
+            <tr>
+                <th><strong>Name</strong></th>
+                <th><strong>Alter</strong></th>
+                <th><strong>Gewicht</strong></th>
+                <th><strong>Championship-Teilnahme</strong></th>
+            </tr>
+            <tr>
+                <td>Hazy</td>
+                <td>4</td>
+                <td>5kg</td>
+                <td>2017, 2018, 2020</td>
+            </tr>
+            <tr>
+                <td>Catwoman</td>
+                <td>1</td>
+                <td>4,3kg</td>
+                <td>2021</td>
+            </tr>
+            <tr>
+                <td>Verkatert</td>
+                <td>2</td>
+                <td>3,1kg</td>
+                <td>2021</td>
+            </tr>
+            <tr>
+                <td>Puschel</td>
+                <td>1</td>
+                <td>2,3kg</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Katerpult</td>
+                <td>3</td>
+                <td>3,3kg</td>
+                <td>2020, 2021</td>
+            </tr>
+            <tr>
+                <td>Freddie</td>
+                <td>2</td>
+                <td>3kg</td>
+                <td>2021</td>
+            </tr>
+            <tr>
+                <td>Balin</td>
+                <td>2</td>
+                <td>2,7kg</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+
+<!--
+        <p>Wilkommen beim Wetterdienst</p>
+        <ol>
+            <li>Trage den <em>Namen der Stadt</em> in das Eingabefeld ein.</li>
+            <li>Wähle aus, <u>welche</u> Daten dir angezeigt werden sollen.</li>
+            <li>(optional) Wähle eine <strong>Farbe</strong></li>
+        </ol>
+        <p>Wenn du nicht weißt, welche Städte du hinzufügen könntest, besuche folgende Seite: <a
+                href="https://de.wikipedia.org/wiki/Liste_der_Millionenst%C3%A4dte">Liste der Millionenstädte auf
+                Wikipedia</a></p>
+    </div>
+    <div>
+        <label for="stadt">Stadt:</label>
+        <input type="text" id="stadt" name="stadt">
+        <div>
+            Einheit:
+            <input type="radio" id="fahrenheit" name="einheit" value="Fahrenheit">
+            <label for="fahrenheit">Fahrenheit</label>
+            <input type="radio" id="celsius" name="einheit" value="Celsius">
+            <label for="celsius">Celsius</label>
+        </div>
+        <div>
+            Ortszeit?
+            <input type="checkbox" id="ortszeit" name="ortszeit">
+        </div>
+        <div>
+            <label for="farben">Farbe:</label>
+            <select name="farben" id="farben">
+                <option value="empty"></option>
+                <option value="rot">Rot</option>
+                <option value="gruen">Grün</option>
+                <option value="blau">Blau</option>
+            </select>
+        </div>
+
+        <div>
+            <button>Reset</button>
+            <button>Submit</button>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <table>
+            <tr>
+                <th><strong>Stadt</strong></th>
+                <th><strong>Temperatur</strong></th>
+                <th><strong>Uhrzeit</strong></th>
+            </tr>
+            <tr>
+                <td>Berlin</td>
+                <td>20°C</td>
+                <td>12:00 Uhr</td>
+            </tr>
+            <tr>
+                <td>Berlin</td>
+                <td>20°C</td>
+                <td>12:00 Uhr</td>
+            </tr>
+        </table>
+    </div>
+
+-->
+
+
+</body>
+
+</html>
