@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Oskar Droescher, Kai Arne Möbert, Mario Schenkewitz, Jos Trautermann, Florian Schoon">
+    <meta name="author" content="Oskar Droescher">
     <link rel="stylesheet" href="OskarStyle.css">
     <title>Web-Programmierung Gruppe 1</title>
 </head>
 
 <body>
     <div>
-        <h1 class="LinearGradient" style="text-align:center; font-size: 120px">Catwatch</h1>
+        <h1 class="PopArt" style="text-align:center; font-size: 140px">CATWATCH</h1>
         <div style="text-align:center;">
-            <h1 class="PopArt" style="font-size: 90px"><u>Slideshow</u></h1>
+            <h1 class="LinearGradient" style="font-size: 90px"><u>WATCH CATS ONLINE</u></h1>
         </div>
 
-          <div class="box center">
+        <div class="box center">
             <img class="mySlides" src="./OskarBilder/Katze-1.png">
             <img class="mySlides" src="./OskarBilder/Katze-2.png">
             <img class="mySlides" src="./OskarBilder/Katze-3.png">
@@ -24,41 +24,49 @@
             <img class="mySlides" src="./OskarBilder/Katze-5.png">
             <img class="mySlides" src="./OskarBilder/Katze-6.png">
             <img class="mySlides" src="./OskarBilder/Katze-7.png">
-          </div>
-          <div style="text-align: center;">
-            <button class="button display-left" style="width: 60; border-radius: 20%; font-size: 24px; background-color: rgb(0, 179, 250); color: white;" onclick="plusDivs(-1)">&#10094;</button>
-            <button class="button display-right" style="width: 60; border-radius: 20%; font-size: 24px; background-color: rgb(0, 179, 250); color: white;" onclick="plusDivs(1)">&#10095;</button>
-            <p class="LinearGradient" style="font-size: 30px; color: black;"><b>Klick dich durch unsere Vielzahl von Katzenbildern und lass dir deinen Tag versüßen!</b></p>
-          </div>
+        </div>
+        <div style="text-align: center;">
+            <button class="button display-left"
+                style="width: 60; border-radius: 20%; font-size: 24px; background-color: rgb(0, 179, 250); color: white;"
+                onclick="plusDivs(-1)">&#10094;</button>
+            <button class="button display-right"
+                style="width: 60; border-radius: 20%; font-size: 24px; background-color: rgb(0, 179, 250); color: white;"
+                onclick="plusDivs(1)">&#10095;</button>
+            <p class="LinearGradient" style="font-size: 30px; color: black;"><b>Click through our variety of cat pictures and make your day! Below you will find more details about the cats, which competitions they have already taken part in and other useful information about cat shows.</b></p>
+        </div>
     </div>
-          
+
     <script>
-    var slideIndex = 1;
-    showDivs(slideIndex);
-    
-    function plusDivs(n) {
-    showDivs(slideIndex += n);
-    }
-    
-    function currentDiv(n) {
-    showDivs(slideIndex = n);
-    }
-    
-    function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("demo");
-    if (n > x.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = x.length}
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";  
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace("white", "");
-    }
-    x[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += "white";
-    }
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function currentDiv(n) {
+            showDivs(slideIndex = n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace("white", "");
+            }
+            x[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += "white";
+        }
     </script>
 
     <hr>
@@ -66,57 +74,59 @@
         <table style="width: auto; max-width: 700px; font-size: 25px; background-color: grey; color: black;">
             <tr>
                 <th><strong>Name</strong></th>
-                <th><strong>Alter</strong></th>
-                <th><strong>Gewicht</strong></th>
-                <th><strong>Championship-Teilnahme</strong></th>
+                <th><strong>Age</strong></th>
+                <th><strong>Weight in kg</strong></th>
+                <th><strong>Competition Participations</strong></th>
             </tr>
             <tr>
                 <td>Hazy</td>
                 <td>4</td>
-                <td>5kg</td>
+                <td>5</td>
                 <td>2017, 2018, 2020</td>
             </tr>
             <tr>
                 <td>Catwoman</td>
                 <td>1</td>
-                <td>4,3kg</td>
+                <td>4,3</td>
                 <td>2021</td>
             </tr>
             <tr>
                 <td>Verkatert</td>
                 <td>2</td>
-                <td>3,1kg</td>
+                <td>3,1</td>
                 <td>2021</td>
             </tr>
             <tr>
                 <td>Puschel</td>
                 <td>1</td>
-                <td>2,3kg</td>
+                <td>2,3</td>
                 <td></td>
             </tr>
             <tr>
                 <td>Katerpult</td>
                 <td>3</td>
-                <td>3,3kg</td>
+                <td>3,3</td>
                 <td>2020, 2021</td>
             </tr>
             <tr>
                 <td>Freddie</td>
                 <td>2</td>
-                <td>3kg</td>
+                <td>3</td>
                 <td>2021</td>
             </tr>
             <tr>
                 <td>Balin</td>
                 <td>2</td>
-                <td>2,7kg</td>
+                <td>2,7</td>
                 <td></td>
             </tr>
         </table>
+        <p style="font-size: 20px;"><b>Alles rundum Katzenausstellungen findest du hier: </b><a target="_blank"
+            href="https://de.wikipedia.org/wiki/Katzenausstellung">Katzenausstellung</a></p>
     </div>
 
 
-<!--
+    <!--
         <p>Wilkommen beim Wetterdienst</p>
         <ol>
             <li>Trage den <em>Namen der Stadt</em> in das Eingabefeld ein.</li>
