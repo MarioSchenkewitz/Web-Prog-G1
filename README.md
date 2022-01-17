@@ -9,6 +9,6 @@ Mario Schenkewitz
 Florian Schoon  
 Jos Trautermann  
 
-Thema: TBD  
+Thema: Katzen  
 
-Beschreibung: TBD  
+Beschreibung: Allgemeine Informationen und Bilder von Katzen  
