@@ -1,0 +1,19 @@
+/*Stylesheet*/
+
+body {
+    background-color: rgb(193, 181, 181);
+  }
+
+table, th, td {
+    border: 1px solid black;
+}
+
+.table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.para {
+    margin-left: auto;
+    margin-right: auto;
+}
