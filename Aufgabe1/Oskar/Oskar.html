@@ -11,184 +11,130 @@
 
 <body>
     <div>
-        <h1 class="PopArt" style="text-align:center; font-size: 140px">CATWATCH</h1>
+        <h1 style="text-align:center; font-size: 140px">CATWATCH</h1>
         <div style="text-align:center;">
-            <h1 class="LinearGradient" style="font-size: 90px"><u>WATCH CATS ONLINE</u></h1>
+            <h1 style="font-size: 90px"><u>WATCH CATS ONLINE</u></h1>
         </div>
 
-        <div class="box center">
-            <img class="mySlides" src="./OskarBilder/Katze-1.png">
-            <img class="mySlides" src="./OskarBilder/Katze-2.png">
-            <img class="mySlides" src="./OskarBilder/Katze-3.png">
-            <img class="mySlides" src="./OskarBilder/Katze-4.png">
-            <img class="mySlides" src="./OskarBilder/Katze-5.png">
-            <img class="mySlides" src="./OskarBilder/Katze-6.png">
-            <img class="mySlides" src="./OskarBilder/Katze-7.png">
+        <div>
+            <img style="width: 250; height: 250;" src="./OskarBilder/Katze-1.png">
         </div>
-        <div style="text-align: center;">
-            <button class="button display-left"
-                style="width: 60; border-radius: 20%; font-size: 24px; background-color: rgb(0, 179, 250); color: white;"
-                onclick="plusDivs(-1)">&#10094;</button>
-            <button class="button display-right"
-                style="width: 60; border-radius: 20%; font-size: 24px; background-color: rgb(0, 179, 250); color: white;"
-                onclick="plusDivs(1)">&#10095;</button>
-            <p class="LinearGradient" style="font-size: 30px; color: black;"><b>Click through our variety of cat pictures and make your day! Below you will find more details about the cats, which competitions they have already taken part in and other useful information about cat shows.</b></p>
+        <div>
+            <button style="font-size: 24px; color: black;">&#10094;</button>
+            <button style="font-size: 24px; color: black;">&#10095;</button>
+            <p style="font-size: 30px; color: black;"><b>Klicke dich durch unsere Vielfalt an
+                    Katzenbildern und versüße dir deinen Tag! Unten findest du mehr Details über die Katzen, an welchen
+                    Wettbewerben sie bereits teilgenommen haben und andere nützliche Informationen über
+                    Katzenausstellungen.</b></p>
         </div>
     </div>
-
-    <script>
-        var slideIndex = 1;
-        showDivs(slideIndex);
-
-        function plusDivs(n) {
-            showDivs(slideIndex += n);
-        }
-
-        function currentDiv(n) {
-            showDivs(slideIndex = n);
-        }
-
-        function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("demo");
-            if (n > x.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = x.length
-            }
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace("white", "");
-            }
-            x[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += "white";
-        }
-    </script>
 
     <hr>
     <div>
-        <table style="width: auto; max-width: 700px; font-size: 25px; background-color: grey; color: black;">
-            <tr>
-                <th><strong>Name</strong></th>
-                <th><strong>Age</strong></th>
-                <th><strong>Weight in kg</strong></th>
-                <th><strong>Competition Participations</strong></th>
-            </tr>
-            <tr>
-                <td>Hazy</td>
-                <td>4</td>
-                <td>5</td>
-                <td>2017, 2018, 2020</td>
-            </tr>
-            <tr>
-                <td>Catwoman</td>
-                <td>1</td>
-                <td>4,3</td>
-                <td>2021</td>
-            </tr>
-            <tr>
-                <td>Verkatert</td>
-                <td>2</td>
-                <td>3,1</td>
-                <td>2021</td>
-            </tr>
-            <tr>
-                <td>Puschel</td>
-                <td>1</td>
-                <td>2,3</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Katerpult</td>
-                <td>3</td>
-                <td>3,3</td>
-                <td>2020, 2021</td>
-            </tr>
-            <tr>
-                <td>Freddie</td>
-                <td>2</td>
-                <td>3</td>
-                <td>2021</td>
-            </tr>
-            <tr>
-                <td>Balin</td>
-                <td>2</td>
-                <td>2,7</td>
-                <td></td>
-            </tr>
-        </table>
-        <p style="font-size: 20px;"><b>Alles rundum Katzenausstellungen findest du hier: </b><a target="_blank"
-            href="https://de.wikipedia.org/wiki/Katzenausstellung">Katzenausstellung</a></p>
-    </div>
-
-
-    <!--
-        <p>Wilkommen beim Wetterdienst</p>
-        <ol>
-            <li>Trage den <em>Namen der Stadt</em> in das Eingabefeld ein.</li>
-            <li>Wähle aus, <u>welche</u> Daten dir angezeigt werden sollen.</li>
-            <li>(optional) Wähle eine <strong>Farbe</strong></li>
-        </ol>
-        <p>Wenn du nicht weißt, welche Städte du hinzufügen könntest, besuche folgende Seite: <a
-                href="https://de.wikipedia.org/wiki/Liste_der_Millionenst%C3%A4dte">Liste der Millionenstädte auf
-                Wikipedia</a></p>
-    </div>
-    <div>
-        <label for="stadt">Stadt:</label>
-        <input type="text" id="stadt" name="stadt">
-        <div>
-            Einheit:
-            <input type="radio" id="fahrenheit" name="einheit" value="Fahrenheit">
-            <label for="fahrenheit">Fahrenheit</label>
-            <input type="radio" id="celsius" name="einheit" value="Celsius">
-            <label for="celsius">Celsius</label>
+        <div style="float: left;">
+            <table style="width: auto; font-size: 25px; color: black; text-align: center;">
+                <tr>
+                    <th><strong>Name</strong></th>
+                    <th><strong>Alter</strong></th>
+                    <th><strong>Gewicht in kg</strong></th>
+                    <th><strong>Katzenausstellungen</strong></th>
+                </tr>
+                <tr>
+                    <td>Hazy</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>2017, 2018, 2020</td>
+                </tr>
+                <tr>
+                    <td>Catwoman</td>
+                    <td>1</td>
+                    <td>4,3</td>
+                    <td>2021</td>
+                </tr>
+                <tr>
+                    <td>Verkatert</td>
+                    <td>2</td>
+                    <td>3,1</td>
+                    <td>2021</td>
+                </tr>
+                <tr>
+                    <td>Puschel</td>
+                    <td>1</td>
+                    <td>2,3</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Katerpult</td>
+                    <td>3</td>
+                    <td>3,3</td>
+                    <td>2020, 2021</td>
+                </tr>
+                <tr>
+                    <td>Freddie</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>2021</td>
+                </tr>
+                <tr>
+                    <td>Balin</td>
+                    <td>2</td>
+                    <td>2,7</td>
+                    <td></td>
+                </tr>
+            </table>
         </div>
-        <div>
-            Ortszeit?
-            <input type="checkbox" id="ortszeit" name="ortszeit">
-        </div>
-        <div>
-            <label for="farben">Farbe:</label>
-            <select name="farben" id="farben">
-                <option value="empty"></option>
-                <option value="rot">Rot</option>
-                <option value="gruen">Grün</option>
-                <option value="blau">Blau</option>
-            </select>
-        </div>
-
-        <div>
+        <div style="font-size: 20px; float: left; margin-left: 40px;">
+            <u>Umfrage:</u>
+            <p>Hättest du Interesse bei einer Katzenausstellung dabei zu sein?
+                <input type="radio" id="ja" name="antwort1" value="Ja">
+                <label for="ja">Ja</label>
+                <input type="radio" id="nein" name="antwort1" value="Nein">
+                <label for="nein">Nein</label>
+            </p>
+            <p>Hast du eine eigene Katze oder einen Kater?
+                <input type="radio" id="ja" name="antwort2" value="Ja">
+                <label for="ja">Ja</label>
+                <input type="radio" id="nein" name="antwort2" value="Nein">
+                <label for="nein">Nein</label>
+            </p>
+            <p>
+                <label for="farben">Falls ja, welche Farbe hat deine Katze / dein Kater?</label>
+                <select name="farben" id="farben">
+                    <option value="empty"></option>
+                    <option value="braun">Braun</option>
+                    <option value="schwarz">Schwarz</option>
+                    <option value="blond">Blond</option>
+                    <option value="weiß">Weiß</option>
+                </select>
+            </p>
+            <p>
+                <label for="katzenname">Wie heißt deine Katze?</label>
+                <input type="text" id="stadt" name="katzenname">
+            </p>
+            <p>
+                Ich akzeptiere die Datenschutzvereinbarung:
+                <input type="checkbox" id="datenschutz" name="datenschutz">
+            </p>
             <button>Reset</button>
             <button>Submit</button>
         </div>
     </div>
-    <hr>
+    <div style="clear: both;"></div>
     <div>
-        <table>
-            <tr>
-                <th><strong>Stadt</strong></th>
-                <th><strong>Temperatur</strong></th>
-                <th><strong>Uhrzeit</strong></th>
-            </tr>
-            <tr>
-                <td>Berlin</td>
-                <td>20°C</td>
-                <td>12:00 Uhr</td>
-            </tr>
-            <tr>
-                <td>Berlin</td>
-                <td>20°C</td>
-                <td>12:00 Uhr</td>
-            </tr>
-        </table>
+        <p style="font-size: 20px;">Auf einer Katzenausstellung werden Rassekatzen von Züchtern und Haltern präsentiert,
+            und nach einer Bewertung durch eine fachkundige Jury prämiert. Katzenausstellungen werden nicht nur von den
+            Ausstellern (Katzenzüchtern) besucht, sondern auch von Katzenliebhabern, die die große Vielfalt von
+            Katzenrassen schätzen, die man dort sehen kann. Veranstalter von Katzenausstellungen sind meist Vereine für
+            Katzenzucht. Die Ausstellungen werden in extra dafür angemieteten Hallen veranstaltet.</p>
+        <p style="font-size: 20px;"><b>Weiterführende Informationen zu Katzenausstellungen findest du hier: </b><a
+                target="_blank" href="https://de.wikipedia.org/wiki/Katzenausstellung">Katzenausstellung - Wikipedia</a>
+        </p>
     </div>
-
--->
-
+    <div>
+        <button>
+            <a style="font-size: 20px;" href="../index.html"><b>Zurück zur Startseite</b></a>
+        </button>
+    </div>
 
 </body>
 
