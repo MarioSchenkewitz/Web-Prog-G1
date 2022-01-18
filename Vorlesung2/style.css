@@ -1,0 +1,64 @@
+.test{
+    margin: 20px;
+}
+
+body {
+    background-color: beige;
+}
+
+
+.shadow{
+    box-shadow: 10px 5px 5px black;
+    border: 1px solid;
+    padding: 10px;
+}
+
+.rainbowtext{
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.flex-container {
+    display: flex;
+    border: solid 1px black;
+}
+
+.flex-container > span {
+    margin: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 15rem auto auto;
+    border: dashed 1px lightgreen;
+}
+
+.header {
+    background-color: rgb(228, 103, 103);
+    grid-column-start: 1;
+    grid-column-end: 4;
+    color: aliceblue;
+}
+a:visited {
+    color: rgb(8, 24, 18);
+}
+.menu {
+    background-color: lightblue;
+    padding: 10px;
+}
+
+.content {
+    background-color: lightgreen;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    padding: 10px;
+}
+
+.footer {
+    background-color: yellow;
+    padding: 10px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
