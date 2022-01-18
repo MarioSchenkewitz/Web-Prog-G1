@@ -7,3 +7,9 @@ body {
 table, th, td {
     border: 1px solid black;
 }
+
+.referenz {
+  font-size: 25px;
+  color: red;
+  margin-left: 20;
+}
