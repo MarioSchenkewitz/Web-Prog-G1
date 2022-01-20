@@ -4,4 +4,24 @@ table, th, td {
 
 body {
     background-color: rgb(90, 129, 129);
-  }
+}
+
+h1,h2,p,div,table {
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+div, table {
+    font-size: 20px;
+}
+
+table{
+    margin: auto;
+}
