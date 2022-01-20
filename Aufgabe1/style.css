@@ -3,10 +3,10 @@ table, th, td {
 }
 
 body {
-    background-color: rgb(90, 129, 129);
+    background-color: #5a8181;
 }
 
-h1,h2,p,div,table {
+.center {
     text-align: center;
 }
 
@@ -24,4 +24,48 @@ div, table {
 
 table{
     margin: auto;
+}
+
+.topnav {
+        font-family: Open Sans,Arial;
+        border-style: solid;
+        border-radius: 25px;
+        background-color: #cfd9df;
+        color: #454545;
+        font-size: 16px;
+        margin: 2em auto;
+        max-width: 1000px;
+        padding: 2em;
+        line-height: 1.4;
+}
+
+.topnav a {
+    color: #454545;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.topnav a:hover {
+    background-color: #5a8181;
+    color: white;
+}
+
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.content {
+    font-family: Open Sans,Arial;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 25px;
+    background-color: #cfd9df;
+    color: #454545;
+    font-size: 16px;
+    margin: 2em auto;
+    max-width: 1000px;
+    padding: 2em;
+    line-height: 1.4;
 }
