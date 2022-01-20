@@ -1,7 +1,7 @@
 /*Stylesheet*/
 
 body {
-    background-color: rgb(193, 181, 181);
+    background-color: beige;
   }
 
 table, th, td {
@@ -16,4 +16,40 @@ table, th, td {
 .para {
     margin-left: auto;
     margin-right: auto;
+}
+
+nav {
+	margin: 27px auto 0;
+	position: relative;
+	width: 590px;
+	height: 50px;
+	background-color: red;
+	border-radius: 8px;
+	font-size: 0;
+}
+
+nav a {
+		line-height: 50px;
+		height: 100%;
+		font-size: 20px;
+		display: inline-block;
+		position: relative;
+		z-index: 1;
+		text-decoration: none;
+		text-transform: uppercase;
+		text-align: center;
+		color: antiquewhite;
+		cursor: pointer;
+}
+a:nth-child(1) {
+	width: 105px;
+}
+a:nth-child(2) {
+	width: 125px;
+}
+a:nth-child(3) {
+	width: 235px;
+}
+a:nth-child(4) {
+	width: 115px;
 }

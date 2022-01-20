@@ -13,85 +13,86 @@
 
 <body>
     <div>
-        <div class="topnav">
-            <a href="./index.html">Home</a>
-            <a href="./Oskar/Oskar.html">Catwatch</a>
-            <a href="./Kai/kai.html">Katzenspielzeug</a>
-            <a href="./contact.html">Unser Team</a>
+        <h1>Willkommen auf dem Katzopedia der Gruppe 1 in Webprogrammierung</h1>
+        <h2>Unser Thema sind Katzen</h2>
+        <p>Funfacts</p>
+        <div>
+            <img src="./www/ballcat.jpg" alt="Eine erstaunlich runde junge Katze" width="200px">
+            <p>Eine kleine Übersicht der beliebtesten Katzenrassen</p>
+            <table>
+                <tr>
+                    <th><strong>Rasse</strong></th>
+                    <th><strong>Platzierung</strong></th>
+                    <th><strong>Wikipedia Link</strong></th>
+                </tr>
+                <tr>
+                    <td>Ragdoll</td>
+                    <td>Nummer 6</td>
+                    <td><a href="https://en.wikipedia.org/wiki/Ragdoll">Wikipedia</a></td>
+                </tr>
+                <tr>
+                    <td>Siamkatze</td>
+                    <td>Nummer 5</td>
+                    <td><a href="https://en.wikipedia.org/wiki/Siamese_cat">Wikipedia</a></td>
+                </tr>
+                <tr>
+                    <td>Perserkatze</td>
+                    <td>Nummer 4</td>
+                    <td><a href="https://en.wikipedia.org/wiki/Persian_cat">Wikipedia</a></td>
+                </tr>
+                <tr>
+                    <td>Maine-Coon </td>
+                    <td>Nummer 3</td>
+                    <td><a href="https://en.wikipedia.org/wiki/Maine_Coon">Wikipedia</a></td>
+                </tr>
+                <tr>
+                    <td>Bengal</td>
+                    <td>Nummer 2</td>
+                    <td><a href="https://en.wikipedia.org/wiki/Bengal_cat">Wikipedia</a></td>
+                </tr>
+                <tr>
+                    <td>Britisch Kurzhaar</td>
+                    <td>Nummer 1</td>
+                    <td><a href="https://en.wikipedia.org/wiki/British_Shorthair">Wikipedia</a></td>
+                </tr>
+            </table>
         </div>
-
-        <div class="center content">
-            <h1>Willkommen auf dem Katzopedia der Gruppe 1 in Webprogrammierung</h1>
-            <h2>Unser Thema sind Katzen</h2>
-            <h3><strong>Funfacts</strong></h3>
+        <div>
+            <p>Was ist deine Lieblingskatze?</p>
+            <label for="stadt">Rasse:</label>
+            <input type="text" id="Rasse" name="Rasse">
             <div>
-                <img src="./www/ballcat.jpg" alt="Eine erstaunlich runde junge Katze" width="200px">
-                <p>Eine kleine Übersicht der beliebtesten Katzenrassen</p>
-                <table>
-                    <tr>
-                        <th><strong>Rasse</strong></th>
-                        <th><strong>Platzierung</strong></th>
-                        <th><strong>Wikipedia Link</strong></th>
-                    </tr>
-                    <tr>
-                        <td>Ragdoll</td>
-                        <td>Nummer 6</td>
-                        <td><a href="https://en.wikipedia.org/wiki/Ragdoll">Wikipedia</a></td>
-                    </tr>
-                    <tr>
-                        <td>Siamkatze</td>
-                        <td>Nummer 5</td>
-                        <td><a href="https://en.wikipedia.org/wiki/Siamese_cat">Wikipedia</a></td>
-                    </tr>
-                    <tr>
-                        <td>Perserkatze</td>
-                        <td>Nummer 4</td>
-                        <td><a href="https://en.wikipedia.org/wiki/Persian_cat">Wikipedia</a></td>
-                    </tr>
-                    <tr>
-                        <td>Maine-Coon </td>
-                        <td>Nummer 3</td>
-                        <td><a href="https://en.wikipedia.org/wiki/Maine_Coon">Wikipedia</a></td>
-                    </tr>
-                    <tr>
-                        <td>Bengal</td>
-                        <td>Nummer 2</td>
-                        <td><a href="https://en.wikipedia.org/wiki/Bengal_cat">Wikipedia</a></td>
-                    </tr>
-                    <tr>
-                        <td>Britisch Kurzhaar</td>
-                        <td>Nummer 1</td>
-                        <td><a href="https://en.wikipedia.org/wiki/British_Shorthair">Wikipedia</a></td>
-                    </tr>
-                </table>
+                Geschlecht:
+                <input type="radio" id="male" name="geschlecht" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="geschlecht" value="Female">
+                <label for="female">Female</label>
             </div>
             <div>
-                <p>Was ist deine Lieblingskatze?</p>
-                <label for="stadt">Rasse:</label>
-                <input type="text" id="Rasse" name="Rasse">
-                <div>
-                    Geschlecht:
-                    <input type="radio" id="male" name="geschlecht" value="Male">
-                    <label for="male">Male</label>
-                    <input type="radio" id="female" name="geschlecht" value="Female">
-                    <label for="female">Female</label>
-                </div>
-                <div>
-                    <label for="farben">Farbe:</label>
-                    <select name="farben" id="farben">
-                        <option value="empty"></option>
-                        <option value="black">Schwarz</option>
-                        <option value="white">Weiß</option>
-                        <option value="brown">Braun</option>
-                        <option value="orange">Orange</option>
-                    </select>
-                </div>
-                <div>
-                    <button>Reset</button>
-                    <button>Submit</button>
-                </div>
+                <label for="farben">Farbe:</label>
+                <select name="farben" id="farben">
+                    <option value="empty"></option>
+                    <option value="black">Schwarz</option>
+                    <option value="white">Weiß</option>
+                    <option value="brown">Braun</option>
+                    <option value="orange">Orange</option>
+                </select>
+            </div>
+            <div>
+                <button>Reset</button>
+                <button>Submit</button>
             </div>
         </div>
     </div>
+    <div>
+        <p>Weiterführende Seiten</p>
+        <ol>
+            <li><span><a href="./Oskar/Oskar.html">Oskars Catwatch</a></span></li>
+            <li><span><a href="./Kai/kai.html">Katzenspielzeug </a></span></li>
+            <li><span><a href="./contact.html">Kontakt</a></span></li>
+        </ol>
+    </div>
+    <hr>
 </body>
+
 </html>
