@@ -1,0 +1,85 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Oskar Droescher, Kai Arne Möbert, Mario Schenkewitz, Jos Trautermann, Florian Schoon">
+    <title>Web-Programmierung Gruppe 1</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Hallo Wetter-App</h1>
+        <h2>Meine Wetterdaten auf einen Blick!</h2>
+        <img src="https://images.vexels.com/media/users/3/240776/isolated/lists/06e9f0ffd56bc079968636d31c473800-sonne-scheint-am-himmel.png"
+            alt="Bild einer Sonnengrafik" width="50px">
+        <p>Wilkommen beim Wetterdienst</p>
+        <ol>
+            <li>Trage den <em>Namen der Stadt</em> in das Eingabefeld ein.</li>
+            <li>Wähle aus, <u>welche</u> Daten dir angezeigt werden sollen.</li>
+            <li>(optional) Wähle eine <strong>Farbe</strong></li>
+        </ol>
+        <p>Wenn du nicht weißt, welche Städte du hinzufügen könntest, besuche folgende Seite: <a
+                href="https://de.wikipedia.org/wiki/Liste_der_Millionenst%C3%A4dte">Liste der Millionenstädte auf
+                Wikipedia</a></p>
+    </div>
+    <div>
+        <label for="stadt">Stadt:</label>
+        <input type="text" id="stadt" name="stadt">
+        <div>
+            Einheit:
+            <input type="radio" id="fahrenheit" name="einheit" value="Fahrenheit">
+            <label for="fahrenheit">Fahrenheit</label>
+            <input type="radio" id="celsius" name="einheit" value="Celsius">
+            <label for="celsius">Celsius</label>
+        </div>
+        <div>
+            Ortszeit?
+            <input type="checkbox" id="ortszeit" name="ortszeit">
+        </div>
+        <div>
+            <label for="farben">Farbe:</label>
+            <select name="farben" id="farben">
+                <option value="empty"></option>
+                <option value="rot">Rot</option>
+                <option value="gruen">Grün</option>
+                <option value="blau">Blau</option>
+            </select>
+        </div>
+
+        <div>
+            <button>Reset</button>
+            <button>Submit</button>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <table>
+            <tr>
+                <th><strong>Stadt</strong></th>
+                <th><strong>Temperatur</strong></th>
+                <th><strong>Uhrzeit</strong></th>
+            </tr>
+            <tr>
+                <td>Berlin</td>
+                <td>20°C</td>
+                <td>12:00 Uhr</td>
+            </tr>
+            <tr>
+                <td>Berlin</td>
+                <td>20°C</td>
+                <td>12:00 Uhr</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
