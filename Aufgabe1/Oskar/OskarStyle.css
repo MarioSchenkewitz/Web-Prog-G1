@@ -19,7 +19,7 @@
   grid-column-start: 1;
   grid-column-end: 6;
   padding: 15px;
-  color: red;
+  color: white;
   font-weight: bold;
 }
 
@@ -27,7 +27,7 @@
   border: 1px solid red;
   padding: 10px;
   font-size: 25px;
-  color: red;
+  color: white;
 }
 
 .content {
@@ -43,12 +43,12 @@
   grid-column-start: 1;
   grid-column-end: 6;
   padding: 15px;
-  color: black;
+  color: white;
   font-weight: bold;
 }
 
 a {
-  color: red;
+  color: white;
 }
 
 hr {
@@ -60,7 +60,7 @@ hr {
 
 body {
   background-color: black;
-  color: red;
+  color: white;
   padding: 2px;
 }
 
@@ -83,7 +83,7 @@ body {
 
 .table {
   float: left;
-  color: red;
+  color: white;
   height: auto;
   width: auto;
   font-size: 25px;
@@ -101,7 +101,7 @@ body {
 th {
   height: 80px;
   background-color: darkgreen;
-  color: red;
+  color: white;
 }
 
 .tr:hover {
