@@ -15,7 +15,9 @@
 }
 
 .header {
-  border: 1px solid red;
+  border-bottom: 1px solid red;
+  border-radius: 10%;
+  border-width: 2px;
   grid-column-start: 1;
   grid-column-end: 6;
   padding: 15px;
@@ -24,14 +26,13 @@
 }
 
 .menu {
-  border: 1px solid red;
+  border-right: 1px solid red;
   padding: 10px;
   font-size: 25px;
   color: white;
 }
 
 .content {
-  border: 1px solid red;
   grid-column-start: 2;
   grid-column-end: 6;
   padding: 10px;
@@ -39,7 +40,9 @@
 
 
 .footer {
-  border: 1px solid red;
+  border-top: 1px solid red;
+  border-radius: 10%;
+  border-width: 2px;
   grid-column-start: 1;
   grid-column-end: 6;
   padding: 15px;
@@ -55,6 +58,8 @@ hr {
   color: red;
   border-color: red;
   background-color: red;
+  border-radius: 80%;
+  border-width: 2px;
 }
 
 
@@ -71,8 +76,8 @@ body {
 }
 
 .katzenbilder-groesse {
-  width: 300;
-  height: 300;
+  width: 500;
+  height: 500;
 }
 
 .switch-button {
