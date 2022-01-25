@@ -18,17 +18,17 @@ Asynchrone, Event-basierte Laufzeitumgebung
 Speziell für Entwicklung von skalierbaren Netzwerkanwendungen  
 
 ## HTTP-Request
-![HTTP-Requests](Vorlesung3\requests.PNG)
+![HTTP-Requests](/Vorlesung3/requests.PNG)
 
 ## Node.JS Beispiel 1
-[Node.JS Beispiel](Vorlesung3\beispiel.js)
+[Node.JS Beispiel](/Vorlesung3/beispiel.js)
 
 ## Node.JS Beispiel 2, Server der HTML liest
-[Node.JS Code](Vorlesung3\beispiel2.js)
-[HTML](Vorlesung3\beispiel2.html)
+[Node.JS Code](/Vorlesung3/beispiel2.js)
+[HTML](/Vorlesung3/beispiel2.html)
 
 ## Express JS Beispiel
-[Express JS Code](Vorlesung3\beispiel3.js)
+[Express JS Code](/Vorlesung3/beispiel3.js)
 
 ## Express JS Alternative Lösung
-[Express JS Code](Vorlesung3\beispiel4.js)
+[Express JS Code](/Vorlesung3/beispiel4.js)
