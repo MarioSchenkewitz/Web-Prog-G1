@@ -1,0 +1,296 @@
+﻿<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Gruppe 1"
+        content="Oskar Droescher, Kai Arne Möbert, Mario Schenkewitz, Jos Trautermann, Florian Schoon">
+    <meta name="author" content="Mario Schenkewitz">
+    <title>Web-Programmierung Gruppe 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <div class="topnav">
+            <a href="./index.html">Home</a>
+            <a href="./Oskar/Oskar.html">Catwatch</a>
+            <a href="./Kai/kai.html">Katzenspielzeug</a>
+            <a href="./contact.html">Unser Team</a>
+        </div>
+        <div class="center content">
+            <h1>Willkommen auf dem Katzopedia der Gruppe 1 in Webprogrammierung</h1>
+            <h2>Unser Thema sind Katzen</h2>
+        </div>
+        <div class="flex">
+            <div class="center content">
+                <div>
+                    <h3>Funfacts</h3>
+                    <img src="./www/ballcat.jpg" alt="Eine erstaunlich runde junge Katze" width="200px">
+                    <p>Eine kleine Übersicht der beliebtesten Katzenrassen</p>
+                    <table>
+                        <tr>
+                            <th><strong>Rasse</strong></th>
+                            <th><strong>Platzierung</strong></th>
+                            <th><strong>Wikipedia Link</strong></th>
+                        </tr>
+                        <tr>
+                            <td>Ragdoll</td>
+                            <td>Nummer 6</td>
+                            <td><a href="https://en.wikipedia.org/wiki/Ragdoll">Wikipedia</a></td>
+                        </tr>
+                        <tr>
+                            <td>Siamkatze</td>
+                            <td>Nummer 5</td>
+                            <td><a href="https://en.wikipedia.org/wiki/Siamese_cat">Wikipedia</a></td>
+                        </tr>
+                        <tr>
+                            <td>Perserkatze</td>
+                            <td>Nummer 4</td>
+                            <td><a href="https://en.wikipedia.org/wiki/Persian_cat">Wikipedia</a></td>
+                        </tr>
+                        <tr>
+                            <td>Maine-Coon </td>
+                            <td>Nummer 3</td>
+                            <td><a href="https://en.wikipedia.org/wiki/Maine_Coon">Wikipedia</a></td>
+                        </tr>
+                        <tr>
+                            <td>Bengal</td>
+                            <td>Nummer 2</td>
+                            <td><a href="https://en.wikipedia.org/wiki/Bengal_cat">Wikipedia</a></td>
+                        </tr>
+                        <tr>
+                            <td>Britisch Kurzhaar</td>
+                            <td>Nummer 1</td>
+                            <td><a href="https://en.wikipedia.org/wiki/British_Shorthair">Wikipedia</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <p>Was ist deine Lieblingskatze?</p>
+                    <label for="stadt">Rasse:</label>
+                    <input type="text" id="Rasse" name="Rasse">
+                    <div>
+                        Geschlecht:
+                        <input type="radio" id="male" name="geschlecht" value="Male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="geschlecht" value="Female">
+                        <label for="female">Female</label>
+                    </div>
+                    <div>
+                        <label for="farben">Farbe:</label>
+                        <select name="farben" id="farben">
+                            <option value="empty"></option>
+                            <option value="black">Schwarz</option>
+                            <option value="white">Weiß</option>
+                            <option value="brown">Braun</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button>Submit</button>
+                        <button>Reset</button>
+                    </div>
+                </div>
+            </div>
+            <div class="center content">
+                <div>
+                    <h3>Katzen Umfrage</h3>
+                </div>
+                <table>
+                    <tr>
+                        <th><strong>Name</strong></th>
+                        <th><strong>Alter</strong></th>
+                        <th><strong>Gewicht in kg</strong></th>
+                        <th><strong>Katzenausstellungen</strong></th>
+                    </tr>
+                    <tr>
+                        <td>Hazy</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>2017, 2018, 2020</td>
+                    </tr>
+                    <tr>
+                        <td>Catwoman</td>
+                        <td>1</td>
+                        <td>4,3</td>
+                        <td>2021</td>
+                    </tr>
+                    <tr>
+                        <td>Verkatert</td>
+                        <td>2</td>
+                        <td>3,1</td>
+                        <td>2021</td>
+                    </tr>
+                    <tr>
+                        <td>Puschel</td>
+                        <td>1</td>
+                        <td>2,3</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Katerpult</td>
+                        <td>3</td>
+                        <td>3,3</td>
+                        <td>2020, 2021</td>
+                    </tr>
+                    <tr>
+                        <td>Freddie</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>2021</td>
+                    </tr>
+                    <tr>
+                        <td>Balin</td>
+                        <td>2</td>
+                        <td>2,7</td>
+                        <td></td>
+                    </tr>
+                </table>
+                <div class="umfrage">
+                    <u>Umfrage:</u>
+                    <p>Hättest du Interesse bei einer Katzenausstellung dabei zu sein?
+                        <input type="radio" id="ja" name="antwort1" value="Ja">
+                        <label for="ja">Ja</label>
+                        <input type="radio" id="nein" name="antwort1" value="Nein">
+                        <label for="nein">Nein</label>
+                    </p>
+                    <p>Hast du eine eigene Katze oder einen Kater?
+                        <input type="radio" id="ja" name="antwort2" value="Ja">
+                        <label for="ja">Ja</label>
+                        <input type="radio" id="nein" name="antwort2" value="Nein">
+                        <label for="nein">Nein</label>
+                    </p>
+                    <p>
+                        <label for="farben">Falls ja, welche Farbe hat deine Katze / dein Kater?</label>
+                        <select name="farben" id="farben">
+                            <option value="empty"></option>
+                            <option value="braun">Braun</option>
+                            <option value="schwarz">Schwarz</option>
+                            <option value="blond">Blond</option>
+                            <option value="weiß">Weiß</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="katzenname">Wie heißt deine Katze?</label>
+                        <input type="text" id="stadt" name="katzenname">
+                    </p>
+                    <p>
+                        Ich akzeptiere die AGB´s und die Datenschutzvereinbarung:
+                        <input type="checkbox" id="datenschutz" name="datenschutz" required>
+                    </p>
+                    <button>Submit</button>
+                    <button>Reset</button>
+                </div>
+            </div>
+            <div class="center content">
+                <div>
+                    <h3>Katzenspielzeug Lexikon <br>
+                        <u>Erfahre alles &uumlber Katzenspielzeug*</u> <br>
+                        <u>*nur eine begrenzte Auswahl in der Kostenlosen-Version</u>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>Bezeichnung</th>
+                            <th>Visuelle Darstellung</th>
+                            <th>Spielspa&szlig</th>
+                            <th>Kaufen</th>
+                        </tr>
+                        <tr>
+                            <td>Besch&aumlftigung</td>
+                            <td><img src="./www/1.jpg"></td>
+                            <td>Hoch, wenn nicht hat das Spielzeug nicht die Bezeichnung "Besch&aumlftigung"
+                                verdiehnt.</td>
+                            <td><a
+                                    href="https://smile.amazon.de/Kumikiwa-Katzentunnel-Bett-zusammenklappbarer-Katzentunnel-Tunnel-Tunnel-abnehmbarer/dp/B08ND1PQ33/ref=sr_1_2?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=M27PRBF4U67F&keywords=katzentunnel&qid=1642535143&sprefix=katzentunnel%2Caps%2C74&sr=8-2">Bei
+                                    Amazon kaufen*</a></td>
+                        </tr>
+                        <tr>
+                            <td>Katzenangel</td>
+                            <td><img src="./www/2.jpg"></td>
+                            <td>Sehr hoch, weil.....es bewegt sich...</td>
+                            <td><a
+                                    href="https://smile.amazon.de/Worsendy-Katzenspielzeug-Interactive-Katzenangel-Federwedel/dp/B074S374PX/ref=sr_1_3?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2XTLP4GOP3WRS&keywords=katzenangel&qid=1642535273&sprefix=katzenangel%2Caps%2C69&sr=8-3">Bei
+                                    Amazon kaufen*</a></td>
+                        </tr>
+                        <tr>
+                            <td>B&aumllle & Spielm&aumluse</td>
+                            <td><img src="./www/3.jpg"></td>
+                            <td>Mittel, ein Ball bewegt sich nicht von alleine.</td>
+                            <td><a
+                                    href="https://smile.amazon.de/PROIRON-Gymnastikball-Anti-Burst-Stabilit%C3%A4t-Fitnessball/dp/B01CBOZAIE/ref=sr_1_1_sspa?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2QWFB0U5Q4CA6&keywords=ball&qid=1642535317&sprefix=ball%2Caps%2C80&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEySjQzMEhWRU9BUzNZJmVuY3J5cHRlZElkPUEwMjY4NTYyM0JWNFlXWFBGVTJDWiZlbmNyeXB0ZWRBZElkPUEwNDA1MjY1VjlYS0RTQ0gzNk1UJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==">Bei
+                                    Amazon kaufen*</a></td>
+                        </tr>
+                        <tr>
+                            <td>Katzentunnel</td>
+                            <td><img src="./www/4.jpg"></td>
+                            <td>Mittel, manchmal interessant</td>
+                            <td><a
+                                    href="https://smile.amazon.de/Noch-5170-05170-Ecktunnel-1-gleisig/dp/B00030MMTO/ref=sr_1_16?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3595A4ZDPL6AV&keywords=tunnel+noch&qid=1642535374&sprefix=tunnel+noch%2Caps%2C54&sr=8-16">Bei
+                                    Amazon kaufen*</a></td>
+                        </tr>
+                        <tr>
+                            <td>Katzenminze</td>
+                            <td><img src="./www/5.jpg"></td>
+                            <td>Niedrig, kein wirkliches Spielzeug</td>
+                            <td><a
+                                    href="https://smile.amazon.de/Bio-Minze-im-Topf-Deutschland/dp/B08S455JCN/ref=sr_1_6_0o_fs?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2ULZM22BXLEYU&keywords=minze&qid=1642535398&sprefix=minze%2Caps%2C69&sr=8-6">Bei
+                                    Amazon kaufen*</a></td>
+                        </tr>
+                        <tr>
+                            <td>Kraftspielzeug</td>
+                            <td><img src="./www/6.jpg"></td>
+                            <td>Niedrig, Katzen und Trainieren? Passt einfach nicht, Katzen sind faul</td>
+                            <td><a
+                                    href="https://smile.amazon.de/Kurzhanteln-Hantelst%C3%A4nder-Kurzhantel-Krafttraining-Fitnessstudio%EF%BC%8CPink-Gr%C3%BCn-Blau/dp/B08CDR3HHK/ref=sr_1_15?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=69MOILYNUCI4&keywords=katze+hantel&qid=1642535444&sprefix=kette+hantel%2Caps%2C58&sr=8-15">Bei
+                                    Amazon kaufen*</a></td>
+                        </tr>
+                        <tr>
+                            <td>Spielh&aumluschen</td>
+                            <td><img src="./www/7.jpg"></td>
+                            <td>Mittel, manchmal interessant</td>
+                            <td><a
+                                    href="https://smile.amazon.de/CanadianCat-Company-Katzenburg-Wellpappe-Katzen/dp/B08PNT8VFG/ref=sr_1_5?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1YQZ8F8S1QT4V&keywords=katzen+spielhaus&qid=1642535468&sprefix=katzen+spielhaus%2Caps%2C76&sr=8-5">Bei
+                                    Amazon kaufen*</a></td>
+                        </tr>
+                        <tr>
+                            <td>Karton</td>
+                            <td><img src="./www/8.jpg"></td>
+                            <td>Sehr hoch. Katzen + Karton passen so gut zusammen wie ihre Anfangsbuchstaben</td>
+                            <td><a
+                                    href="https://smile.amazon.de/Bankers-00154-Aufbewahrungsbox-St%C3%BCck-braun/dp/B01NAX5F8L/ref=sr_1_5?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2A79PSP82U33M&keywords=karton&qid=1642535484&sprefix=karton%2Caps%2C78&sr=8-5">Bei
+                                    Amazon kaufen*</a></td>
+                        </tr>
+                    </table>
+                    <p>*Die Links sind Affiliate-Links. Die Angebote stammen nicht von der Seite, allerdings
+                        erh&aumllt diese Seite durch den Verweis eine Provision, wenn dann ein Kauf stattfindet,
+                        jedoch ohne dass Ihnen zus&aumltzliche Kosten entstehen.</p>
+                </div>
+                <div>
+                    <h3>Anfrage f&uumlr Katzenspielzeug stellen:</h3>
+                    <form>
+                        Ihre E-Mail-Adresse: <input type="text" required /><br />
+                        Thema ihrer Anfrage:
+                        <select name="Thema" id="dropdown">
+                            <option value="1">Katzenspielzeug</option>
+                            <option value="2">Individuelle Anfertigung</option>
+                            <option value="4">Sonstige</option>
+                        </select><br />
+                        Ihre Nachricht:<br />
+                        <textarea cols="75" rows="10"></textarea>
+                        <br />
+
+                        Akzeptieren die AGBs um eine Antwort zu erhalten. Einfach den Button anklicken.
+                        <input type="checkbox" name="1" value="" id="check1" required><br />
+                        <button type="reset">Reset</button>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
