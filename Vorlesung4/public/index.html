@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dies ist der Titel der Seite</title>
+  </head>
+  <body>
+    <h1>Überschrift 1</h1>
+    <form action="/data" method="POST">
+      <fieldset>
+        <legend>Lokales</legend>
+        <label for="city">Stadt: </label>
+        <input type="text" id="city" name="city" />
+        <label for="timezone">Ortszeit: </label>
+        <input type="checkbox" id="timezone" name="timezone" />
+      </fieldset>
+      <fieldset>
+        <legend>Aktionen</legend>
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+    <ol id="data"></ol>
+    <script>
+      const dataElement = document.getElementById("data");
+      fetch("/data")
+        .then((response) => response.json())
+        .then((data) => {
+          data.forEach((element) => {
+            const listElement = document.createElement("li");
+            listElement.textContent = element.city;
+            dataElement.appendChild(listElement);
+          });
+        })
+        .catch((e) => alert(e));
+    </script>
+  </body>
+</html>
