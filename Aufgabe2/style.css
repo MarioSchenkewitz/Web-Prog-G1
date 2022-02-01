@@ -13,11 +13,11 @@ body {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 div{
@@ -91,6 +91,9 @@ tr:hover {
     max-width: 1000px;
     padding: 2em;
     line-height: 1.4;
+    flex-basis: 500px;
+    flex-shrink: 0;
+    flex-grow: 0;
 }
 
 .flex {
