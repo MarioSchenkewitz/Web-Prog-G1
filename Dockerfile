@@ -1,11 +1,10 @@
 # syntax=docker/dockerfile:1  
 FROM node:12-alpine  
-RUN apk add --no-cache python2 g++ make  
+ENV NODE_ENV=production
 RUN apk update && apk add git  
 RUN git clone https://github.com/MarioSchenkewitz/Web-Prog-G1.git  
-RUN npm install  
-RUN npm install express  
+WORKDIR /Web-Prog-G1/Aufgabe3
+RUN npm install --production
 RUN yarn install --production  
-WORKDIR /Web-Prog-G1/Aufgabe3  
-CMD ["node", "index.js"]  
+CMD ["node", "./index.js"]  
 EXPOSE 8080  
