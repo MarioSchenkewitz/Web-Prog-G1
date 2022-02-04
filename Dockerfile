@@ -7,5 +7,5 @@ RUN npm install
 RUN npm install express  
 RUN yarn install --production  
 WORKDIR /Web-Prog-G1/Aufgabe3  
-CMD ["node", "Web-Prog-G1/Aufgabe3/index.js"]  
+CMD ["node", "index.js"]  
 EXPOSE 8080  
