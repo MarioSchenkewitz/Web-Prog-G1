@@ -64,6 +64,6 @@ oder:
 **PUT** /tiere/1 - ersetzt das Tier-Element mit der ID 1.  
 
 ## Beispiel
-[Express JS HTTP Methoden Beispiel](/Vorlesung4/index.js)
-[gelieferte HTML](/Vorlesung4/public/index.html)
-[Express JS HTTP Loesung](/Vorlesung4/loesung.js)
+[Express JS HTTP Methoden Beispiel](/Vorlesung4/index.js)  
+[gelieferte HTML](/Vorlesung4/public/index.html)  
+[Express JS HTTP Loesung](/Vorlesung4/loesung.js)  
