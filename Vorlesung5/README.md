@@ -3,7 +3,7 @@
 ### Basics
 Ermöglicht dynamische Inhalte in HTML  
 Abstrahiert die Dokumentenstruktur im DOM  
-Einbindung mittels <\script> im <\head> oder <\body>  
+Einbindung mittels <script> im <head> oder <body>  
 Dateiendung .js  
 
 ### Übung
@@ -28,7 +28,7 @@ Aufgabe 2:
 
 ### Übung
 Aufgabe 3:
-- Erstellen Sie in ihrem HTML-Dokument ein neues Listenelement (<\ol> id="liste" />)  
+- Erstellen Sie in ihrem HTML-Dokument ein neues Listenelement (<ol> id="liste" />)  
 - Verändern Sie ihren JavaScript-Code so, dass 15 neue Listenelemente mit Eintragsnummer hinzugefügt werden.  
 [index.html](/Vorlesung5/Aufgabe1-3/index.html)  
 
@@ -36,7 +36,7 @@ Aufgabe 3:
 - **A**sybchronous **J**avaScript **A**nd **X**ml  
 - Ermöglicht Daten vom Server zu erhalten oder zu senden ohne, dass ein HTML-Dokument neu geladen wird.  
 - Daten könnne durch XMLhttpRequest oder die fetch-API abgefragt werden.  
-![AJAX](/Vorlesung5/public/AJAX.PNG)  
+![AJAX](/Vorlesung5/public/AJAX.png)  
 
 ### Übung
 Aufgabe 4:  
