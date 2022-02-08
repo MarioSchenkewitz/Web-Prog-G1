@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <script>
+      function getListe() {
+        return document.getElementById("liste1");
+      }
+
+      function createListenElement(text) {
+        const li = document.createElement("li");
+        li.innerText = text;
+        return li;
+      }
+    </script>
+  </head>
+  <body>
+    <ol id="liste1"></ol>
+    <script async>
+      const liste = getListe();
+      fetch("/data")
+        .catch((err) => console.error(err))
+        .then((res) => res.json())
+        .then((daten) => {
+          daten.forEach((nummer) => {
+            const listenElement = createListenElement("Element" + nummer);
+            liste.appendChild(listenElement);
+          });
+        });
+    </script>
+  </body>
+</html>

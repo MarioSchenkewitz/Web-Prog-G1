@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Uebung</title>
+</head>
+
+<body>
+    <span name="test1" id="test2">Dies ist ein Text.</span>
+    <span name="test1">Dies ist ein Text A.</span>
+    <span>Dies ist ein Text B.</span>
+    <span>Dies ist ein Text C.</span>
+
+    <ol id="liste"></ol>
+
+</body>
+
+</html>
+<script>
+    /*
+    const variante1 = document.getElementsByTagName("span")
+    for (let i = 0; i < variante1.length; i++) {
+        console.log(variante1[i]);
+        
+    }
+    */
+
+    const variante2 = document.getElementsByName("test1");
+    for (let i = 0; i < variante2.length; i++) {
+        console.log(variante2[i]);
+
+    }
+
+    /*
+    const variante3 = document.getElementById("test2");
+    console.log("Der Inhalt des span Elements: " + variante3.innerText);
+    */
+
+</script>
+<script src="script.js"></script>
+<!--<script src="domtest.js"></script>-->
