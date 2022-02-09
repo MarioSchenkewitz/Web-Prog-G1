@@ -1,0 +1,194 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Oskar Droescher">
+    <link rel="stylesheet" href="./css/catwatch.css">
+    <title>Web-Programmierung Gruppe 1</title>
+</head>
+
+<body>
+    <!--Navbar-->
+    <div class="grid-container">
+        <div class="header flex-container">
+            <span>Catwatch</span>
+            <span><a href="./index.html">Home</a></span>
+            <span><a href="./katzenspielzeug.html">Katzenspielzeug</a></span>
+            <span><a href="./contact.html">Unser Team</a></span>
+            <span><a href="#seitenende">Zum Seitenende</a></span>
+        </div>
+        
+
+        <!--Menu-->
+        <div class="menu">
+            <span><u>Menü:</u></span>
+            <br>
+            <ol>
+                <li><a href="#tabelle1">Tabelle</a></li>
+                <li><a href="#weiterführendeInformationen">Weiterführende Informationen</a></li>
+            </ol>
+        </div>
+
+        <!--Content-->
+        <!--Katzenbilder-->
+        <div class="content">
+            <div class="katzenbilder">
+                <div>
+                    <img class="katzenbilder-groesse" src="./www/Katze-1.png">
+                </div>
+                <button class="switch-button">&#10094;</button>
+                <button class="switch-button">&#10095;</button>
+            </div>
+            <hr>
+
+            <!--Klicke dich...-->
+            <div>
+                <p style="font-size: 30px;">Klicke dich durch unsere Vielfalt an
+                    Katzenbildern und versüße dir deinen Tag! Unten findest du mehr Details über die Katzen, an
+                    welchen
+                    Wettbewerben sie bereits teilgenommen haben und andere nützliche Informationen über
+                    Katzenausstellungen.
+                </p>
+            </div>
+            <hr>
+
+
+
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <!--Tabelle & Umfrage-->
+                            <div>
+                                <table id="tabelle1" class="table th td">
+                                    <tr>
+                                        <th class="th td"><strong>Name</strong></th>
+                                        <th class="th td"><strong>Alter</strong></th>
+                                        <th class="th td"><strong>Gewicht in kg</strong></th>
+                                        <th class="th td"><strong>Katzenausstellungen</strong></th>
+                                    </tr>
+                                    <tr class="tr">
+                                        <td class="th td">Hazy</td>
+                                        <td class="th td">4</td>
+                                        <td class="th td">5</td>
+                                        <td class="th td">2017, 2018, 2020</td>
+                                    </tr>
+                                    <tr class="tr">
+                                        <td class="th td">Catwoman</td>
+                                        <td class="th td">1</td>
+                                        <td class="th td">4,3</td>
+                                        <td class="th td">2021</td>
+                                    </tr>
+                                    <tr class="tr">
+                                        <td class="th td">Verkatert</td>
+                                        <td class="th td">2</td>
+                                        <td class="th td">3,1</td>
+                                        <td class="th td">2021</td>
+                                    </tr>
+                                    <tr class="tr">
+                                        <td class="th td">Puschel</td>
+                                        <td class="th td">1</td>
+                                        <td class="th td">2,3</td>
+                                        <td class="th td"></td>
+                                    </tr>
+                                    <tr class="tr">
+                                        <td class="th td">Katerpult</td>
+                                        <td class="th td">3</td>
+                                        <td class="th td">3,3</td>
+                                        <td class="th td">2020, 2021</td>
+                                    </tr>
+                                    <tr class="tr">
+                                        <td class="th td">Freddie</td>
+                                        <td class="th td">2</td>
+                                        <td class="th td">3</td>
+                                        <td class="th td">2021</td>
+                                    </tr>
+                                    <tr class="tr">
+                                        <td class="th td">Balin</td>
+                                        <td class="th td">2</td>
+                                        <td class="th td">2,7</td>
+                                        <td class="th td"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                        <td>
+                            <!--Umfrage-->
+                            <div class="umfrage">
+                                <u>Umfrage:</u>
+                                <p>Hättest du Interesse bei einer Katzenausstellung dabei zu sein?
+                                    <input type="radio" id="ja" name="antwort1" value="Ja">
+                                    <label for="ja">Ja</label>
+                                    <input type="radio" id="nein" name="antwort1" value="Nein">
+                                    <label for="nein">Nein</label>
+                                </p>
+                                <p>Hast du eine eigene Katze oder einen Kater?
+                                    <input type="radio" id="ja" name="antwort2" value="Ja">
+                                    <label for="ja">Ja</label>
+                                    <input type="radio" id="nein" name="antwort2" value="Nein">
+                                    <label for="nein">Nein</label>
+                                </p>
+                                <p>
+                                    <label for="farben">Falls ja, welche Farbe hat deine Katze / dein Kater?</label>
+                                    <select name="farben" id="farben">
+                                        <option value="empty"></option>
+                                        <option value="braun">Braun</option>
+                                        <option value="schwarz">Schwarz</option>
+                                        <option value="blond">Blond</option>
+                                        <option value="weiß">Weiß</option>
+                                    </select>
+                                </p>
+                                <p>
+                                    <label for="katzenname">Wie heißt deine Katze?</label>
+                                    <input type="text" id="stadt" name="katzenname">
+                                </p>
+                                <p>
+                                    Ich akzeptiere die AGB´s und die Datenschutzvereinbarung:
+                                    <input type="checkbox" id="datenschutz" name="datenschutz" required>
+                                </p>
+                                <button>Submit</button>
+                                <button>Reset</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+
+            <!--Infotext-->
+            <div style="clear: both;"></div>
+            <div>
+                <p style="font-size: 20px;">Auf einer Katzenausstellung werden Rassekatzen von Züchtern und Haltern
+                    präsentiert,
+                    und nach einer Bewertung durch eine fachkundige Jury prämiert. Katzenausstellungen werden nicht nur
+                    von den
+                    Ausstellern (Katzenzüchtern) besucht, sondern auch von Katzenliebhabern, die die große Vielfalt von
+                    Katzenrassen schätzen, die man dort sehen kann. Veranstalter von Katzenausstellungen sind meist
+                    Vereine für
+                    Katzenzucht. Die Ausstellungen werden in extra dafür angemieteten Hallen veranstaltet.</p>
+                <p id="weiterführendeInformationen" style="font-size: 20px;"><b>Weiterführende Informationen zu
+                        Katzenausstellungen findest du hier: </b><a target="_blank"
+                        href="https://de.wikipedia.org/wiki/Katzenausstellung">Katzenausstellung - Wikipedia</a>
+                </p>
+            </div>
+        </div>
+
+        <!--Infotext-->
+        <div class="footer flex-container">
+            <span><a href="#top">Seitenanfang</a></span>
+            <span><a href="./Datenschutz.html">Datenschutz</a></span>
+        </div>
+
+
+    </div>
+    <p id="seitenende"></p>
+
+
+
+
+</body>
+
+</html>
