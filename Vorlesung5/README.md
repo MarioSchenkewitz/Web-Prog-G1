@@ -1,4 +1,4 @@
-# JavaSCript
+# JavaScript
 ## Dynamische Inhalte im Frontend
 ### Basics
 Ermöglicht dynamische Inhalte in HTML  
@@ -33,7 +33,7 @@ Aufgabe 3:
 [index.html](/Vorlesung5/Aufgabe1-3/index.html)  
 
 ### AJAX
-- **A**sybchronous **J**avaScript **A**nd **X**ml  
+- **A**synchronous **J**avaScript **A**nd **X**ml  
 - Ermöglicht Daten vom Server zu erhalten oder zu senden ohne, dass ein HTML-Dokument neu geladen wird.  
 - Daten könnne durch XMLhttpRequest oder die fetch-API abgefragt werden.  
 ![AJAX](/Vorlesung5/public/AJAX.png)  
