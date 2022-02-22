@@ -1,6 +1,26 @@
 {
   "dependencies": {
     "cookie-parser": "^1.4.6",
-    "express": "^4.17.2"
-  }
+    "express": "^4.17.3",
+    "uuid":"^8.3.2"
+  },
+  "name": "web-prog-g1",
+  "description": "Dies ist das Repository der Gruppe 1 aus dem HWR Modul Web-Programmierung 4-3131-TIT20B",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarioSchenkewitz/Web-Prog-G1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarioSchenkewitz/Web-Prog-G1/issues"
+  },
+  "homepage": "https://github.com/MarioSchenkewitz/Web-Prog-G1#readme"
 }
