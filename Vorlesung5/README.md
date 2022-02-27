@@ -15,7 +15,7 @@ Lassen sie mit console.log den String "Hello World!" auf der Konsole der ENtwick
 
 Aufgabe 2:  
 - Verschaffen Sie sich einen kurzen Überblick über die Grundlagen von JavaScript (Variable, Funktionsaufrufe, etc.)  
-- Erstellen Sie eine Funktion die einen Parameter annimmt und diesen auf der KOnsole (dev tools) ausgibt.  
+- Erstellen Sie eine Funktion die einen Parameter annimmt und diesen auf der Konsole (dev tools) ausgibt.  
 **code** *logItem*("Hello World!")  
 **Ausgabe auf der Konsole:** *Info*: Hello World!  
 [index.html](/Vorlesung5/Aufgabe1-3/script.js)

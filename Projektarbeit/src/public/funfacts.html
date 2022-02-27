@@ -1,0 +1,97 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Gruppe 1"
+        content="Oskar Droescher, Kai Arne Möbert, Mario Schenkewitz, Jos Trautermann, Florian Schoon">
+    <meta name="author" content="Mario Schenkewitz">
+    <title>Web-Programmierung Gruppe 1</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+    <div>
+        <div class="topnav">
+            <a href="./home.html">Home</a>
+            <a href="./funfacts.html">Funfacts</a>
+            <a href="./catwatch.html">Catwatch</a>
+            <a href="./katzenspielzeug.html">Katzenspielzeug</a>
+            <a href="./contact.html">Unser Team</a>
+        </div>
+
+        <div class="flex">
+            <div class="center content">
+                <div>
+                    <h3>Funfacts</h3>
+                    <img src="./www/ballcat.jpg" alt="Eine erstaunlich runde junge Katze" width="200px">
+                    <p>Eine kleine Übersicht der beliebtesten Katzenrassen</p>
+                    <table>
+                        <tr>
+                            <th><strong>Rasse</strong></th>
+                            <th><strong>Platzierung</strong></th>
+                            <th><strong>Wikipedia Link</strong></th>
+                        </tr>
+                        <tr>
+                            <td>Ragdoll</td>
+                            <td>Nummer 6</td>
+                            <td><a href="https://en.wikipedia.org/wiki/Ragdoll">Wikipedia</a></td>
+                        </tr>
+                        <tr>
+                            <td>Siamkatze</td>
+                            <td>Nummer 5</td>
+                            <td><a href="https://en.wikipedia.org/wiki/Siamese_cat">Wikipedia</a></td>
+                        </tr>
+                        <tr>
+                            <td>Perserkatze</td>
+                            <td>Nummer 4</td>
+                            <td><a href="https://en.wikipedia.org/wiki/Persian_cat">Wikipedia</a></td>
+                        </tr>
+                        <tr>
+                            <td>Maine-Coon </td>
+                            <td>Nummer 3</td>
+                            <td><a href="https://en.wikipedia.org/wiki/Maine_Coon">Wikipedia</a></td>
+                        </tr>
+                        <tr>
+                            <td>Bengal</td>
+                            <td>Nummer 2</td>
+                            <td><a href="https://en.wikipedia.org/wiki/Bengal_cat">Wikipedia</a></td>
+                        </tr>
+                        <tr>
+                            <td>Britisch Kurzhaar</td>
+                            <td>Nummer 1</td>
+                            <td><a href="https://en.wikipedia.org/wiki/British_Shorthair">Wikipedia</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <p>Was ist deine Lieblingskatze?</p>
+                    <label for="stadt">Rasse:</label>
+                    <input type="text" id="Rasse" name="Rasse">
+                    <div>
+                        Geschlecht:
+                        <input type="radio" id="male" name="geschlecht" value="Male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="geschlecht" value="Female">
+                        <label for="female">Female</label>
+                    </div>
+                    <div>
+                        <label for="farben">Farbe:</label>
+                        <select name="farben" id="farben">
+                            <option value="empty"></option>
+                            <option value="black">Schwarz</option>
+                            <option value="white">Weiß</option>
+                            <option value="brown">Braun</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button>Submit</button>
+                        <button>Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

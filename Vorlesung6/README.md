@@ -8,7 +8,7 @@
 ![Cookies](/Vorlesung6/public/cookies.PNG)
 
 Aufgabe 1:  
-- Lesen sie den Wert eines bestimmten Cookies aus. Erstellen sie hierzu eine Express.js-Anwendung und geben sie bei jeder Anfrage den Wert des Cookies mit der BEzeichnung `username` auf der Node.js-Konsole aus.  
+- Lesen sie den Wert eines bestimmten Cookies aus. Erstellen sie hierzu eine Express.js-Anwendung und geben sie bei jeder Anfrage den Wert des Cookies mit der Bezeichnung `username` auf der Node.js-Konsole aus.  
 z.B. `username: someuser1`  
 [index.js](/Vorlesung6/Aufgabe1/index.js)
 

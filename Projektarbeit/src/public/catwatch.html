@@ -1,0 +1,117 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Gruppe 1"
+        content="Oskar Droescher, Kai Arne Möbert, Mario Schenkewitz, Jos Trautermann, Florian Schoon">
+    <meta name="author" content="Mario Schenkewitz">
+    <title>Web-Programmierung Gruppe 1</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+    <div>
+        <div class="topnav">
+            <a href="./home.html">Home</a>
+            <a href="./funfacts.html">Funfacts</a>
+            <a href="./catwatch.html">Catwatch</a>
+            <a href="./katzenspielzeug.html">Katzenspielzeug</a>
+            <a href="./contact.html">Unser Team</a>
+        </div>
+        <div class="flex">
+            <div class="center content">
+                <div>
+                    <img src="./www/Katze-1.png" width="500px">
+                    <h3>Katzen Umfrage</h3>
+                </div>
+                <table>
+                    <tr>
+                        <th><strong>Name</strong></th>
+                        <th><strong>Alter</strong></th>
+                        <th><strong>Gewicht in kg</strong></th>
+                        <th><strong>Katzenausstellungen</strong></th>
+                    </tr>
+                    <tr>
+                        <td>Hazy</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>2017, 2018, 2020</td>
+                    </tr>
+                    <tr>
+                        <td>Catwoman</td>
+                        <td>1</td>
+                        <td>4,3</td>
+                        <td>2021</td>
+                    </tr>
+                    <tr>
+                        <td>Verkatert</td>
+                        <td>2</td>
+                        <td>3,1</td>
+                        <td>2021</td>
+                    </tr>
+                    <tr>
+                        <td>Puschel</td>
+                        <td>1</td>
+                        <td>2,3</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Katerpult</td>
+                        <td>3</td>
+                        <td>3,3</td>
+                        <td>2020, 2021</td>
+                    </tr>
+                    <tr>
+                        <td>Freddie</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>2021</td>
+                    </tr>
+                    <tr>
+                        <td>Balin</td>
+                        <td>2</td>
+                        <td>2,7</td>
+                        <td></td>
+                    </tr>
+                </table>
+                <div style="padding-top: 10px;">
+                    <u>Umfrage:</u>
+                    <p>Hättest du Interesse bei einer Katzenausstellung dabei zu sein?
+                        <input type="radio" id="ja" name="antwort1" value="Ja">
+                        <label for="ja">Ja</label>
+                        <input type="radio" id="nein" name="antwort1" value="Nein">
+                        <label for="nein">Nein</label>
+                    </p>
+                    <p>Hast du eine eigene Katze oder einen Kater?
+                        <input type="radio" id="ja" name="antwort2" value="Ja">
+                        <label for="ja">Ja</label>
+                        <input type="radio" id="nein" name="antwort2" value="Nein">
+                        <label for="nein">Nein</label>
+                    </p>
+                    <p>
+                        <label for="farben">Falls ja, welche Farbe hat deine Katze / dein Kater?</label>
+                        <select name="farben" id="farben">
+                            <option value="empty"></option>
+                            <option value="braun">Braun</option>
+                            <option value="schwarz">Schwarz</option>
+                            <option value="blond">Blond</option>
+                            <option value="weiß">Weiß</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="katzenname">Wie heißt deine Katze?</label>
+                        <input type="text" id="stadt" name="katzenname">
+                    </p>
+                    <p>
+                        Ich akzeptiere die AGB´s und die Datenschutzvereinbarung:
+                        <input type="checkbox" id="datenschutz" name="datenschutz" required>
+                    </p>
+                    <button>Submit</button>
+                    <button>Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

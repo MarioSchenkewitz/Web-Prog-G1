@@ -2,7 +2,8 @@
   "dependencies": {
     "cookie-parser": "^1.4.6",
     "express": "^4.17.3",
-    "uuid":"^8.3.2"
+    "uuid":"^8.3.2",
+    "body-parser": ""
   },
   "name": "web-prog-g1",
   "description": "Dies ist das Repository der Gruppe 1 aus dem HWR Modul Web-Programmierung 4-3131-TIT20B",

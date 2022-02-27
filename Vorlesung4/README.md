@@ -34,7 +34,7 @@ Die Flag -d (detached) sorgt dafür, dass die Console nicht blockiert wird.
 >docker run -d -p 8080:3000 example1-image
 
 # Thema Express JS
-POST /hasutiere
+POST /haustiere
 GET /haustiere/hund
 PUT /haustiere/hund
 DELETE /hautiere/hund
