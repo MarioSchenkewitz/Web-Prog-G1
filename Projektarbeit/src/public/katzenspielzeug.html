@@ -106,25 +106,34 @@
                 </div>
                 <div>
                     <h3>Anfrage f&uumlr Katzenspielzeug stellen:</h3>
-                    <form>
-                        Ihre E-Mail-Adresse: <input type="text" required /><br />
-                        Thema ihrer Anfrage:
-                        <select name="Thema" id="dropdown">
-                            <option value="1">Katzenspielzeug</option>
-                            <option value="2">Individuelle Anfertigung</option>
-                            <option value="4">Sonstige</option>
-                        </select><br />
-                        Ihre Nachricht:<br />
-                        <textarea cols="75" rows="10"></textarea>
-                        <br />
-
-                        Akzeptieren die AGBs um eine Antwort zu erhalten. Einfach den Button anklicken.
-                        <input type="checkbox" name="1" value="" id="check1" required><br />
-                        <button type="reset">Reset</button>
-                        <button type="submit">Submit</button>
+                    <form action="/katzenspielzeug/comment" method="POST">
+                        <label for="name">Dein Name:</label>
+                        <input type="text" id="name" name="name">
+                        <br>
+                        <textarea rows="4" cols="50" name="kommentar">Schreibe einen Kommentar...</textarea>
+                        <div>
+                            <button>Submit</button>
+                            <button>Reset</button>
+                        </div>
                     </form>
+                    <p>Kommentare:</p>
+                    <ol id="data"></ol>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        const dataElement = document.getElementById("data");
+        fetch("/katzenspielzeug/comment")
+          .then((response) => response.json())
+          .then((data) => {
+            data.forEach((element) => {
+              const listElement = document.createElement("li");
+              listElement.textContent = element;
+              dataElement.appendChild(listElement);
+            });
+          })
+          .catch((e) => alert(e));
+      </script>
 </body>
+</html>

@@ -77,41 +77,35 @@
                     </tr>
                 </table>
                 <div style="padding-top: 10px;">
-                    <u>Umfrage:</u>
-                    <p>Hättest du Interesse bei einer Katzenausstellung dabei zu sein?
-                        <input type="radio" id="ja" name="antwort1" value="Ja">
-                        <label for="ja">Ja</label>
-                        <input type="radio" id="nein" name="antwort1" value="Nein">
-                        <label for="nein">Nein</label>
-                    </p>
-                    <p>Hast du eine eigene Katze oder einen Kater?
-                        <input type="radio" id="ja" name="antwort2" value="Ja">
-                        <label for="ja">Ja</label>
-                        <input type="radio" id="nein" name="antwort2" value="Nein">
-                        <label for="nein">Nein</label>
-                    </p>
-                    <p>
-                        <label for="farben">Falls ja, welche Farbe hat deine Katze / dein Kater?</label>
-                        <select name="farben" id="farben">
-                            <option value="empty"></option>
-                            <option value="braun">Braun</option>
-                            <option value="schwarz">Schwarz</option>
-                            <option value="blond">Blond</option>
-                            <option value="weiß">Weiß</option>
-                        </select>
-                    </p>
-                    <p>
-                        <label for="katzenname">Wie heißt deine Katze?</label>
-                        <input type="text" id="stadt" name="katzenname">
-                    </p>
-                    <p>
-                        Ich akzeptiere die AGB´s und die Datenschutzvereinbarung:
-                        <input type="checkbox" id="datenschutz" name="datenschutz" required>
-                    </p>
-                    <button>Submit</button>
-                    <button>Reset</button>
+                    <u>Schreibe uns doch ein wenig über deine Katze:</u>
+                    <form action="/catwatch/comment" method="POST">
+                        <label for="name">Dein Name:</label>
+                        <input type="text" id="name" name="name">
+                        <br>
+                        <textarea rows="4" cols="50" name="kommentar">Schreibe einen Kommentar...</textarea>
+                        <div>
+                            <button>Submit</button>
+                            <button>Reset</button>
+                        </div>
+                    </form>
+                    <p>Kommentare:</p>
+                    <ol id="data"></ol>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        const dataElement = document.getElementById("data");
+        fetch("/catwatch/comment")
+          .then((response) => response.json())
+          .then((data) => {
+            data.forEach((element) => {
+              const listElement = document.createElement("li");
+              listElement.textContent = element;
+              dataElement.appendChild(listElement);
+            });
+          })
+          .catch((e) => alert(e));
+      </script>
 </body>
+</html>

@@ -50,10 +50,21 @@ app.listen(port, () => {
 app.get("/funfacts/comment", userCheck, getComment);
 app.post("/funfacts/comment", userCheck, addComment);
 
-const comments = [];
+app.get("/catwatch/comment", userCheck, getComment);
+app.post("/catwatch/comment", userCheck, addComment);
+
+app.get("/katzenspielzeug/comment", userCheck, getComment);
+app.post("/katzenspielzeug/comment", userCheck, addComment);
+
+const comments = {
+  funfactscomment: [],
+  catwatchcomment: [],
+  katzenspielzeugcomment: []
+};
 const users = {};
 
 function addComment(req, res) {
+  var currentUrl = req.url.toString().replace(/\//g, "")
   if (req.body.name) {
     //falls der name geändert wird
     if (users[req.cookies.username] != req.body.name) {
@@ -63,14 +74,15 @@ function addComment(req, res) {
     users[req.cookies.username] = "Anonymous";
   }
   if (req.body.kommentar) {
-    comments.push(users[req.cookies.username] + ": " + req.body.kommentar);
+    comments[currentUrl].push(users[req.cookies.username] + ": " + req.body.kommentar);
     console.log(comments)
   }
 
-  res.redirect("/funfacts.html");
+  res.redirect('back');
   res.send();
 }
 
-function getComment(_, res) {
-  res.json(comments);
+function getComment(req, res) {
+  var currentUrl = req.url.toString().replace(/\//g, "")
+  res.json(comments[currentUrl]);
 }
