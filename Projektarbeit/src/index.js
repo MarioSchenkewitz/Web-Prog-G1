@@ -23,11 +23,12 @@ app.use(bodyParser.urlencoded({
 }));
 
 function userCheck(req, res, next) {
-  if (req.cookies.username) {
-    console.log("user is logged in");
-  } else {
+  if (!req.cookies.username) {
     console.log("not logged in");
-    res.cookie("username", uuidv4(), { maxAge: 900000, httpOnly: true })
+    res.cookie("username", uuidv4(), {
+      maxAge: 900000,
+      httpOnly: true
+    })
   }
   next()
 }
@@ -37,7 +38,7 @@ app.use(userCheck);
 app.use("/", userCheck, express.static("./public"))
 
 
-app.get("/test",userCheck, (req, res) => {
+app.get("/test", userCheck, (req, res) => {
 
 });
 
@@ -46,17 +47,27 @@ app.listen(port, () => {
   console.log(`Katzopedia app listening on port ${port}`);
 });
 
-app.get("/funfacts/comment", getComment);
-app.post("/funfacts/comment", addComment);
+app.get("/funfacts/comment", userCheck, getComment);
+app.post("/funfacts/comment", userCheck, addComment);
 
 const comments = [];
+const users = {};
 
 function addComment(req, res) {
-  if (req.body.comments) {
-    comments.push(req.cookies.username + ": " + req.body);
+  if (req.body.name) {
+    //falls der name geändert wird
+    if (users[req.cookies.username] != req.body.name) {
+      users[req.cookies.username] = req.body.name;
+    }
+  } else {
+    users[req.cookies.username] = "Anonymous";
   }
-  console.log(comments);
-  res.redirect("/");
+  if (req.body.kommentar) {
+    comments.push(users[req.cookies.username] + ": " + req.body.kommentar);
+    console.log(comments)
+  }
+
+  res.redirect("/funfacts.html");
   res.send();
 }
 
