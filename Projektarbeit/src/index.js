@@ -8,6 +8,7 @@ const cookieParser = require("cookie-parser");
 const {
   v4: uuidv4
 } = require("uuid");
+const { redirect } = require("express/lib/response");
 
 // wir machen unsere applikation bekannt
 const app = express();
@@ -26,17 +27,17 @@ const userlist = [];
 
 
 function userCheck(req, res, next) {
-  if (!req.cookies.username) {
-    let user = {
-      id: "",
-      name: "",
-      kommentare: [],
-      favoriten: [],
-      funfacts: 0,
-      catwatch: 0,
-      katzenspielzeug: 0
-    };
+  let user = {
+    id: "",
+    name: "",
+    kommentare: [],
+    favoriten: [],
+    funfacts: 0,
+    catwatch: 0,
+    katzenspielzeug: 0
+  };
 
+  if (!req.cookies.username) {
     user.id = uuidv4()
 
     console.log("logging in");
@@ -48,11 +49,29 @@ function userCheck(req, res, next) {
     userlist.push(user);
     // console.log("userlist:");
     // console.log(userlist);
+  } else {
+    if (!userlist.find(user => user.id === req.cookies.username)) {
+      user.id = req.cookies.username;
+      userlist.push(user);
+    }   
   }
   next()
 }
+function addVisit(req, res, next){
+  var currentUrl = req.url.toString().replace(/\//g, "").replace(/.html/g,"");
 
-app.use("/", userCheck, express.static("./public"))
+  if(currentUrl === "funfacts" || currentUrl === "catwatch" || currentUrl === "katzenspielzeug"){
+    for (const obj of userlist) {
+      if (obj.id === req.cookies.username) {
+        obj[currentUrl]++;
+        break;
+      }
+    }
+  }
+  next();
+}
+
+app.use("/", userCheck, addVisit, express.static("./public"))
 
 // und starte den server und lausche auf Port 8080
 app.listen(port, () => {
@@ -147,8 +166,6 @@ function getFav(req, res) {
   var currentUrl = req.url.toString().replace(/\/fav/g, ".html");
   let user = userlist.find(user => user.id === req.cookies.username)
   if (user) {
-    console.log(user)
-    console.log(currentUrl)
     if (user.favoriten.includes(currentUrl)) {
       res.json('Favorit entfernen')
     } else {
@@ -165,3 +182,17 @@ app.get('/favs', (req, res) => {
     res.json(user.favoriten);
   }
 });
+
+function getMostVisited(req, res) {
+  let mostVisited = []
+
+  let user = userlist.find(user => user.id === req.cookies.username)
+  if (user) {
+    mostVisited.push("funfacts: " + user.funfacts);
+    mostVisited.push("catwatch: " + user.catwatch);
+    mostVisited.push("katzenspielzeug: " + user.katzenspielzeug);
+  }
+  res.json(mostVisited)
+};
+
+app.get("/mostVisited", getMostVisited);
