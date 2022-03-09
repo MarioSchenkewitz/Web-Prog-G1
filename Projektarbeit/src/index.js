@@ -47,8 +47,6 @@ function userCheck(req, res, next) {
       secure: true
     })
     userlist.push(user);
-    // console.log("userlist:");
-    // console.log(userlist);
   } else {
     if (!userlist.find(user => user.id === req.cookies.username)) {
       user.id = req.cookies.username;
@@ -70,22 +68,6 @@ function addVisit(req, res, next){
   }
   next();
 }
-
-app.use("/", userCheck, addVisit, express.static("./public"))
-
-// und starte den server und lausche auf Port 8080
-app.listen(port, () => {
-  console.log(`Katzopedia app listening on port ${port}`);
-});
-
-app.get("/funfacts/comment", userCheck, getComment);
-app.post("/funfacts/comment", userCheck, addComment);
-
-app.get("/catwatch/comment", userCheck, getComment);
-app.post("/catwatch/comment", userCheck, addComment);
-
-app.get("/katzenspielzeug/comment", userCheck, getComment);
-app.post("/katzenspielzeug/comment", userCheck, addComment);
 
 const comments = {
   funfactscomment: [],
@@ -111,7 +93,7 @@ function addComment(req, res) {
     }
     //add comment to commentslist
     comments[currentUrl].push(name + ": " + req.body.kommentar)
-    console.log(comments)
+    //console.log(comments)
   }
 
   res.redirect('back');
@@ -122,18 +104,6 @@ function getComment(req, res) {
   var currentUrl = req.url.toString().replace(/\//g, "")
   res.json(comments[currentUrl]);
 }
-
-//für favoriten vllt ein userobjekt anlegen mit ID, favoriten als array und kommentare als array.
-//dann ein array aus user objekten?
-
-app.get('/funfacts/fav', getFav);
-app.post('/funfacts/fav', addFav);
-
-app.get("/catwatch/fav", getFav);
-app.post("/catwatch/fav", addFav);
-
-app.get("/katzenspielzeug/fav", getFav);
-app.post("/katzenspielzeug/fav", addFav);
 
 function addFav(req, res) {
   var currentUrl = req.url.toString().replace(/\/fav/g, ".html");
@@ -162,7 +132,7 @@ function addFav(req, res) {
   }
 };
 
-function getFav(req, res) {
+function isFav(req, res) {
   var currentUrl = req.url.toString().replace(/\/fav/g, ".html");
   let user = userlist.find(user => user.id === req.cookies.username)
   if (user) {
@@ -174,16 +144,8 @@ function getFav(req, res) {
   }
 };
 
-app.get('/favs', (req, res) => {
-  var currentUrl = req.url.toString().replace(/\/fav/g, ".html");
-  let user = userlist.find(user => user.id === req.cookies.username)
-
-  if (user) {
-    res.json(user.favoriten);
-  }
-});
-
 function getMostVisited(req, res) {
+  //array for responding with the visit values
   let mostVisited = []
 
   let user = userlist.find(user => user.id === req.cookies.username)
@@ -195,4 +157,38 @@ function getMostVisited(req, res) {
   res.json(mostVisited)
 };
 
+app.get("/funfacts/comment", userCheck, getComment);
+app.post("/funfacts/comment", userCheck, addComment);
+
+app.get("/catwatch/comment", userCheck, getComment);
+app.post("/catwatch/comment", userCheck, addComment);
+
+app.get("/katzenspielzeug/comment", userCheck, getComment);
+app.post("/katzenspielzeug/comment", userCheck, addComment);
+
+app.get('/funfacts/fav', isFav);
+app.post('/funfacts/fav', addFav);
+
+app.get("/catwatch/fav", isFav);
+app.post("/catwatch/fav", addFav);
+
+app.get("/katzenspielzeug/fav", isFav);
+app.post("/katzenspielzeug/fav", addFav);
+
 app.get("/mostVisited", getMostVisited);
+
+app.get('/favs', (req, res) => {
+  var currentUrl = req.url.toString().replace(/\/fav/g, ".html");
+  let user = userlist.find(user => user.id === req.cookies.username)
+
+  if (user) {
+    res.json(user.favoriten);
+  }
+});
+
+app.use("/", userCheck, addVisit, express.static("./public"))
+
+// und starte den server und lausche auf Port 8080
+app.listen(port, () => {
+  console.log(`Katzopedia app listening on port ${port}`);
+});
