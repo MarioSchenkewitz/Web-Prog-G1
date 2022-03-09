@@ -23,6 +23,9 @@
         <div class="flex">
             <div class="center content">
                 <div>
+                    <button id="addfav" style="float: right;">button</button>
+                </div>
+                <div>
                     <img src="./www/Katze-1.png" width="500px">
                     <h3>Katzen Umfrage</h3>
                 </div>
@@ -97,15 +100,24 @@
     <script>
         const dataElement = document.getElementById("data");
         fetch("/catwatch/comment")
-          .then((response) => response.json())
-          .then((data) => {
-            data.forEach((element) => {
-              const listElement = document.createElement("li");
-              listElement.textContent = element;
-              dataElement.appendChild(listElement);
-            });
-          })
-          .catch((e) => alert(e));
-      </script>
+            .then((response) => response.json())
+            .then((data) => {
+                data.forEach((element) => {
+                    const listElement = document.createElement("li");
+                    listElement.textContent = element;
+                    dataElement.appendChild(listElement);
+                });
+            })
+            .catch((e) => alert(e));
+
+        fetch("/catwatch/fav")
+            .then((response) => response.json())
+            .then((data) => {
+                button.innerText = data;
+            })
+            .catch((e) => alert(e));
+    </script>
+    <script src="./scripts/addfav.js"></script>
 </body>
+
 </html>

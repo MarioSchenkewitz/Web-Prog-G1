@@ -22,18 +22,35 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
+const userlist = [];
+
+
 function userCheck(req, res, next) {
   if (!req.cookies.username) {
-    console.log("not logged in");
-    res.cookie("username", uuidv4(), {
+    let user = {
+      id: "",
+      name: "",
+      kommentare: [],
+      favoriten: [],
+      funfacts: 0,
+      catwatch: 0,
+      katzenspielzeug: 0
+    };
+
+    user.id = uuidv4()
+
+    console.log("logging in");
+    res.cookie("username", user.id, {
       maxAge: 900000,
-      httpOnly: true
+      httpOnly: true,
+      secure: true
     })
+    userlist.push(user);
+    // console.log("userlist:");
+    // console.log(userlist);
   }
   next()
 }
-
-app.use(userCheck);
 
 app.use("/", userCheck, express.static("./public"))
 
@@ -56,30 +73,26 @@ const comments = {
   catwatchcomment: [],
   katzenspielzeugcomment: []
 };
-const commentsToDisplay={
-  funfactscomment: [],
-  catwatchcomment: [],
-  katzenspielzeugcomment: []
-};
-const users = {};
-
 
 function addComment(req, res) {
-  var currentUrl = req.url.toString().replace(/\//g, "")
+  var currentUrl = req.url.toString().replace(/\//g, "");
+  var name;
   if (req.body.name) {
-    //falls der name geändert wird
-    if (users[req.cookies.username] != req.body.name) {
-      users[req.cookies.username] = req.body.name;
-    }
+    name = req.body.name;
   } else {
-    users[req.cookies.username] = "Anonymous";
+    name = "Anonymous";
   }
   if (req.body.kommentar) {
-    comments[currentUrl].push(req.cookies.username + ": " + req.body.kommentar);
+    //add comment to user
+    for (const obj of userlist) {
+      if (obj.id === req.cookies.username) {
+        obj.kommentare.push(name + ": " + req.body.kommentar)
+        break;
+      }
+    }
+    //add comment to commentslist
+    comments[currentUrl].push(name + ": " + req.body.kommentar)
     console.log(comments)
-
-    commentsToDisplay[currentUrl].push(users[req.cookies.username] + ": " + req.body.kommentar )
-    console.log(commentsToDisplay)
   }
 
   res.redirect('back');
@@ -88,5 +101,67 @@ function addComment(req, res) {
 
 function getComment(req, res) {
   var currentUrl = req.url.toString().replace(/\//g, "")
-  res.json(commentsToDisplay[currentUrl]);
+  res.json(comments[currentUrl]);
 }
+
+//für favoriten vllt ein userobjekt anlegen mit ID, favoriten als array und kommentare als array.
+//dann ein array aus user objekten?
+
+app.get('/funfacts/fav', getFav);
+app.post('/funfacts/fav', addFav);
+
+app.get("/catwatch/fav", getFav);
+app.post("/catwatch/fav", addFav);
+
+app.get("/katzenspielzeug/fav", getFav);
+app.post("/katzenspielzeug/fav", addFav);
+
+function addFav(req, res) {
+  var currentUrl = req.url.toString().replace(/\/fav/g, ".html");
+  //const click = {clickTime: new Date()};
+  //console.log(click);
+  let user = userlist.find(user => user.id === req.cookies.username)
+  if (user) {
+    if (!user.favoriten.includes(currentUrl)) {
+      for (const obj of userlist) {
+        if (obj.id === req.cookies.username) {
+          obj.favoriten.push(currentUrl)
+          break;
+        }
+      }
+      res.json('Favorit entfernen')
+    } else {
+      for (const obj of userlist) {
+        if (obj.id === req.cookies.username) {
+          const index = obj.favoriten.indexOf(currentUrl)
+          obj.favoriten.splice(index, 1)
+          break;
+        }
+      }
+      res.json('Favorit hinzufügen')
+    }
+  }
+};
+
+function getFav(req, res) {
+  var currentUrl = req.url.toString().replace(/\/fav/g, ".html");
+  let user = userlist.find(user => user.id === req.cookies.username)
+  if (user) {
+    console.log(user)
+    console.log(currentUrl)
+    if (user.favoriten.includes(currentUrl)) {
+      res.json('Favorit entfernen')
+    } else {
+      res.json('Favorit hinzufügen')
+    }
+  }
+};
+
+app.get('/favs', (req, res) => {
+  var currentUrl = req.url.toString().replace(/\/fav/g, ".html");
+  let user = userlist.find(user => user.id === req.cookies.username)
+
+  if (user) {
+    res.json(user.favoriten);
+  }
+});

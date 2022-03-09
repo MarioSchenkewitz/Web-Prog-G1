@@ -20,10 +20,13 @@
             <a href="./katzenspielzeug.html">Katzenspielzeug</a>
             <a href="./contact.html">Unser Team</a>
         </div>
-
         <div class="flex">
             <div class="center content">
                 <div>
+                    <div>
+                        <button id="addfav" style="float: right;">button</button>
+                    </div>
+                    <br>
                     <h3>Funfacts</h3>
                     <img src="./www/ballcat.jpg" alt="Eine erstaunlich runde junge Katze" width="200px">
                     <p>Eine kleine Übersicht der beliebtesten Katzenrassen</p>
@@ -86,15 +89,24 @@
     <script>
         const dataElement = document.getElementById("data");
         fetch("/funfacts/comment")
-          .then((response) => response.json())
-          .then((data) => {
-            data.forEach((element) => {
-              const listElement = document.createElement("li");
-              listElement.textContent = element;
-              dataElement.appendChild(listElement);
-            });
-          })
-          .catch((e) => alert(e));
-      </script>
+            .then((response) => response.json())
+            .then((data) => {
+                data.forEach((element) => {
+                    const listElement = document.createElement("li");
+                    listElement.textContent = element;
+                    dataElement.appendChild(listElement);
+                });
+            })
+            .catch((e) => alert(e));
+
+        fetch("/funfacts/fav")
+            .then((response) => response.json())
+            .then((data) => {
+                button.innerText = data;
+            })
+            .catch((e) => alert(e));
+    </script>
+    <script src="./scripts/addfav.js"></script>
 </body>
+
 </html>
