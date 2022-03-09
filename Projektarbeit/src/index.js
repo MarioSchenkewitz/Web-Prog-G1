@@ -37,11 +37,6 @@ app.use(userCheck);
 
 app.use("/", userCheck, express.static("./public"))
 
-
-app.get("/test", userCheck, (req, res) => {
-
-});
-
 // und starte den server und lausche auf Port 8080
 app.listen(port, () => {
   console.log(`Katzopedia app listening on port ${port}`);
@@ -61,7 +56,13 @@ const comments = {
   catwatchcomment: [],
   katzenspielzeugcomment: []
 };
+const commentsToDisplay={
+  funfactscomment: [],
+  catwatchcomment: [],
+  katzenspielzeugcomment: []
+};
 const users = {};
+
 
 function addComment(req, res) {
   var currentUrl = req.url.toString().replace(/\//g, "")
@@ -74,8 +75,11 @@ function addComment(req, res) {
     users[req.cookies.username] = "Anonymous";
   }
   if (req.body.kommentar) {
-    comments[currentUrl].push(users[req.cookies.username] + ": " + req.body.kommentar);
+    comments[currentUrl].push(req.cookies.username + ": " + req.body.kommentar);
     console.log(comments)
+
+    commentsToDisplay[currentUrl].push(users[req.cookies.username] + ": " + req.body.kommentar )
+    console.log(commentsToDisplay)
   }
 
   res.redirect('back');
@@ -84,5 +88,5 @@ function addComment(req, res) {
 
 function getComment(req, res) {
   var currentUrl = req.url.toString().replace(/\//g, "")
-  res.json(comments[currentUrl]);
+  res.json(commentsToDisplay[currentUrl]);
 }
