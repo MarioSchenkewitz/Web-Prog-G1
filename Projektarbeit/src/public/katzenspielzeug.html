@@ -23,9 +23,6 @@
         <div class="flex">
             <div class="center content">
                 <div>
-                    <button id="addfav" style="float: right;">button</button>
-                </div>
-                <div>
                     <h3>Katzenspielzeug Lexikon <br>
                         <u>Erfahre alles &uumlber Katzenspielzeug*</u> <br>
                         <u>*nur eine begrenzte Auswahl in der Kostenlosen-Version</u>
@@ -115,8 +112,8 @@
                         <br>
                         <textarea rows="4" cols="50" name="kommentar">Schreibe einen Kommentar...</textarea>
                         <div>
-                            <button type="submit">Submit</button>
-                            <button type="reset">Reset</button>
+                            <button>Submit</button>
+                            <button>Reset</button>
                         </div>
                     </form>
                     <p>Kommentare:</p>
@@ -137,14 +134,6 @@
             });
           })
           .catch((e) => alert(e));
-
-          fetch("/katzenspielzeug/fav")
-            .then((response) => response.json())
-            .then((data) => {
-                button.innerText = data;
-            })
-            .catch((e) => alert(e));
       </script>
-      <script src="./scripts/addfav.js"></script>
 </body>
 </html>
