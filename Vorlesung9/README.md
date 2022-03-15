@@ -38,8 +38,8 @@ Vorgänge im Hintergrund ausführen
 - Pseudo Parallelisierung mithilfe von z.B. `setTimeout()` oder `setInterval()`  
 - Ausführung erfolg weiterhin im UI Thread  
 
-[!WebWorkers](/Vorlesung9/www/WebWorkers.jpg)  
-[!WebWorkers](/Vorlesung9/www/WebWorkers2.jpg)  
+![WebWorkers](/Vorlesung9/www/WebWorkers.jpg)  
+![WebWorkers](/Vorlesung9/www/WebWorkers2.jpg)  
 
 ### Zeigt immer nur den letzten Wert an.  
 [Uebung 3](/Vorlesung9/uebung3/index.html)  
@@ -48,5 +48,5 @@ Vorgänge im Hintergrund ausführen
 [Uebung 3 Complete](/Vorlesung9/uebung3-complete/index.html)  
 
 ## Aufgabe
-[!Aufgabe 1](/Vorlesung9/www/Aufgabe1.jpg)  
+![Aufgabe 1](/Vorlesung9/www/Aufgabe1.jpg)  
 [Aufgabe1](/Vorlesung9/aufgabe1/public/index.html)  
