@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTML5 Example</title>
+  </head>
+  <body>
+    <div id="videoContainer" style="display: grid; width: max-content;">
+      <video
+        id="videoPlayer1"
+        src="https://upload.wikimedia.org/wikipedia/commons/transcoded/6/64/2012-07-18_Market_Street_-_San_Francisco.webm/2012-07-18_Market_Street_-_San_Francisco.webm.480p.vp9.webm"
+        muted
+        crossorigin="anonymous"
+        loop
+        preload="metadata"
+        poster="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/WebM_logo.svg/250px-WebM_logo.svg.png"
+      ></video>
+      <div style="display: flex;">
+        <button id="playpause" style="min-width: 5vw;">play</button>
+        <button id="back">-5s</button>
+        <button id="fwd">+5s</button>&nbsp;
+        <progress id="videoProgress" value="0" max="100" style="width: 100%;" />
+      </div>
+    </div>
+    <script src="player.js"></script>
+  </body>
+</html>

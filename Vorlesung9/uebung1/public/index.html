@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <script src="tinybind/tinybind.js"></script>
+  </head>
+  <body>
+    <label for="student">Student ausw&auml;hlen:</label>
+    <input list="students1" name="student" id="student" />
+    <datalist id="students1">
+      <option value="12345" />
+      <option value="13346" />
+      <option value="14347" />
+      <option value="14348" />
+    </datalist>
+
+    <datalist id="students1">
+      <option rv-each-student="studentList" rv-value="student.matrikelnr" />
+    </datalist>
+    <script>
+      const students = { studentList: [] };
+      tinybind.bind(document.getElementById("students"), students);
+
+      function buildList() {
+        fetch("/students")
+          .then((response) => (response.ok ? response.json() : []))
+          .then((json) => (students.studentList = json));
+
+        setTimeout(() => {
+          buildList();
+        }, 5000);
+      }
+
+      buildList();
+    </script>
+  </body>
+</html>
